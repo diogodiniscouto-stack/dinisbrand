@@ -1,7 +1,7 @@
 import type { Variants } from "framer-motion";
 
 /** Smooth, premium easing curve used across the site. */
-export const easeOutExpo = [0.16, 1, 0.3, 1] as const;
+export const easeOutExpo: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },

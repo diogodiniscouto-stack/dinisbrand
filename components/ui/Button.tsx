@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 
 type Variant = "primary" | "secondary" | "ghost";
@@ -12,8 +13,7 @@ const variants: Record<Variant, string> = {
     "bg-neutral-900 text-white shadow-soft hover:bg-neutral-800 hover:shadow-card active:scale-[0.98]",
   secondary:
     "border border-neutral-200 bg-white text-neutral-800 shadow-soft hover:border-neutral-300 hover:bg-neutral-50 active:scale-[0.98]",
-  ghost:
-    "text-neutral-700 hover:bg-neutral-100 active:scale-[0.98]",
+  ghost: "text-neutral-700 hover:bg-neutral-100 active:scale-[0.98]",
 };
 
 const sizes: Record<Size, string> = {
@@ -22,28 +22,20 @@ const sizes: Record<Size, string> = {
   lg: "h-12 px-6 text-base",
 };
 
-type CommonProps = {
+type ButtonProps = {
   variant?: Variant;
   size?: Size;
-  className?: string;
-  children: React.ReactNode;
-};
+} & ComponentProps<typeof Link>;
 
 export function Button({
-  href,
   variant = "primary",
   size = "md",
   className,
   children,
   ...props
-}: CommonProps &
-  ({ href: string } & Omit<
-    React.ComponentPropsWithoutRef<typeof Link>,
-    "href" | "className"
-  >)) {
+}: ButtonProps) {
   return (
     <Link
-      href={href}
       className={cn(base, variants[variant], sizes[size], className)}
       {...props}
     >
@@ -52,13 +44,18 @@ export function Button({
   );
 }
 
+type ButtonElProps = {
+  variant?: Variant;
+  size?: Size;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+
 export function ButtonEl({
   variant = "primary",
   size = "md",
   className,
   children,
   ...props
-}: CommonProps & React.ButtonHTMLAttributes<HTMLButtonElement>) {
+}: ButtonElProps) {
   return (
     <button
       className={cn(base, variants[variant], sizes[size], className)}

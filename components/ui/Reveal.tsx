@@ -11,19 +11,16 @@ export function Reveal({
   className,
   variants = fadeUp,
   delay = 0,
-  as = "div",
   amount = 0.3,
 }: {
   children: React.ReactNode;
   className?: string;
   variants?: Variants;
   delay?: number;
-  as?: "div" | "section" | "li" | "span";
   amount?: number;
 }) {
-  const MotionTag = motion[as];
   return (
-    <MotionTag
+    <motion.div
       className={className}
       variants={variants}
       initial="hidden"
@@ -32,6 +29,6 @@ export function Reveal({
       transition={delay ? { delay } : undefined}
     >
       {children}
-    </MotionTag>
+    </motion.div>
   );
 }
