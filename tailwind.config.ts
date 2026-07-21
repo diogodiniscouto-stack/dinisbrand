@@ -75,12 +75,17 @@ const config: Config = {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
+        "neon-flow": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "200% 50%" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards",
         float: "float 6s ease-in-out infinite",
         "neon-pulse": "neon-pulse 3.2s ease-in-out infinite",
         "neon-spin": "neon-spin 6s linear infinite",
+        "neon-flow": "neon-flow 4s linear infinite",
       },
     },
   },

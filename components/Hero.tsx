@@ -86,21 +86,15 @@ export function Hero() {
 
             {/* Email CTA with animated neon ring */}
             <motion.div variants={fadeUp} className="group relative mt-8 w-full max-w-xl">
-              {/* Outer neon glow */}
+              {/* Outer neon glow (flowing gradient, shape-safe) */}
               <div
                 aria-hidden
-                className="pointer-events-none absolute -inset-3 overflow-hidden rounded-[2rem] opacity-50 blur-xl transition-opacity duration-500 group-focus-within:opacity-80 sm:rounded-full"
-              >
-                <div className="absolute left-1/2 top-1/2 aspect-square w-[150%] -translate-x-1/2 -translate-y-1/2 animate-neon-spin bg-[conic-gradient(from_0deg,#3B5BFF,#22D3EE,#8B5CF6,#3B5BFF)]" />
-              </div>
-              {/* Spinning gradient border */}
-              <div className="relative overflow-hidden rounded-[1.55rem] sm:rounded-full">
-                <div
-                  aria-hidden
-                  className="absolute left-1/2 top-1/2 aspect-square w-[150%] -translate-x-1/2 -translate-y-1/2 animate-neon-spin bg-[conic-gradient(from_0deg,#3B5BFF,#22D3EE,#8B5CF6,#3B5BFF)]"
-                />
-                {/* White form inset reveals the ring */}
-                <div className="relative m-[1.6px] rounded-[1.45rem] bg-white sm:rounded-full">
+                className="pointer-events-none absolute -inset-2.5 rounded-[1.9rem] bg-[linear-gradient(90deg,#3B5BFF,#22D3EE,#8B5CF6,#3B5BFF)] bg-[length:200%_100%] opacity-40 blur-xl animate-neon-flow transition-opacity duration-500 group-focus-within:opacity-70 sm:rounded-full"
+              />
+              {/* Gradient border */}
+              <div className="relative rounded-[1.55rem] bg-[linear-gradient(90deg,#3B5BFF,#22D3EE,#8B5CF6,#3B5BFF)] bg-[length:200%_100%] p-[2px] shadow-[0_20px_50px_-22px_rgba(59,91,255,0.55)] animate-neon-flow sm:rounded-full">
+                {/* White form inside reveals the ring */}
+                <div className="rounded-[1.45rem] bg-white sm:rounded-full">
                   <EmailCaptureForm size="hero" />
                 </div>
               </div>
@@ -143,11 +137,19 @@ export function Hero() {
           <p className="mb-7 text-center text-xs font-medium uppercase tracking-[0.18em] text-neutral-400">
             Powered by the tools every ecommerce founder should know
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-9 gap-y-5">
+          <motion.div
+            variants={staggerContainer(0.09)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex flex-wrap items-center justify-center gap-x-9 gap-y-5"
+          >
             {brandLogos.map((Logo, i) => (
-              <Logo key={i} />
+              <motion.div key={i} variants={fadeUp}>
+                <Logo />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </motion.div>
       </Container>
 
