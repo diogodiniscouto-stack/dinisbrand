@@ -142,7 +142,7 @@ export function Hero() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="flex flex-wrap items-center justify-center gap-x-9 gap-y-5"
+            className="mx-auto flex max-w-4xl flex-wrap items-center justify-center gap-x-10 gap-y-6 sm:justify-between"
           >
             {brandLogos.map((Logo, i) => (
               <motion.div key={i} variants={fadeUp}>

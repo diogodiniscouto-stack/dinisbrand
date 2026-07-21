@@ -93,24 +93,26 @@ export function ToolkitSidebar({ onNavigate }: { onNavigate?: () => void }) {
         </ul>
       </nav>
 
-      {/* Unlock CTA */}
+      {/* Mentorship CTA */}
       <div className="p-3">
-        <Link
-          href="/#zero-to-brand"
+        <a
+          href="https://www.linkedin.com/in/diogo-dinis-a16bb1188/"
+          target="_blank"
+          rel="noreferrer"
           onClick={onNavigate}
           className="group block overflow-hidden rounded-2xl border border-neutral-200/70 bg-neutral-950 p-4 shadow-soft transition-transform duration-300 hover:-translate-y-0.5"
         >
           <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-accent-300">
-            Complete roadmap
+            Work with me
           </p>
           <p className="mt-1 text-sm font-medium leading-snug text-white">
-            Unlock Zero to Brand™
+            1:1 Mentorship
           </p>
           <span className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-white/60">
-            All 15 modules
+            Apply on LinkedIn
             <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5" />
           </span>
-        </Link>
+        </a>
       </div>
     </div>
   );
