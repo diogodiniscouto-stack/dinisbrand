@@ -59,14 +59,39 @@ Navbar · Hero · Trusted System · Free Starter Kit · Zero to Brand™ · Ment
 
 The site is built as a value ladder:
 
-1. **Landing (`/`)** — the hero captures an email in exchange for the free starter kit (`components/EmailCaptureForm.tsx`).
-2. **Free members area (`/welcome`)** — "Welcome to Zero to Brand™" with the 5 free modules (Lesson 1, Free Templates, Niche Validation, Brand Positioning, Shopify Checklist) and a persistent top banner: *"Want the complete roadmap? Unlock all 15 modules →"*.
-3. **Paid roadmap** — the `#unlock` section on `/welcome` shows all 15 modules (5 unlocked, 10 locked) with the upgrade CTA.
-4. **1:1 mentorship** — the natural next step, linked from both the landing page and the members area.
+1. **Landing (`/`)** — the hero captures an email in exchange for the free Starter Kit (`components/EmailCaptureForm.tsx`).
+2. **Private Starter Kit dashboard (`/welcome`)** — a Notion/Linear/Stripe-inspired members area (see below).
+3. **Paid roadmap** — Zero to Brand™, promoted through contextual CTAs throughout the dashboard.
+4. **1:1 mentorship** — promoted alongside the roadmap.
 
 Both starter-kit captures (hero + Free Starter Kit section) submit the email and redirect to `/welcome`.
 
+## Starter Kit dashboard
+
+A private, app-like experience under `/welcome` with a persistent sidebar, progress tracking and per-lesson templates.
+
+```
+app/welcome/
+  layout.tsx          Dashboard shell (sidebar + mobile drawer), noindex
+  page.tsx            Welcome overview (progress, continue, lesson grid)
+  [slug]/page.tsx     Individual lesson (static-generated per lesson)
+components/starter-kit/
+  DashboardShell.tsx  Sidebar chrome + ProgressProvider
+  Sidebar.tsx         Lesson nav, progress bar, unlock CTA
+  progress.tsx        localStorage-backed progress context
+  WelcomeOverview.tsx Dashboard home
+  LessonView.tsx      Reading time · outcomes · download · mark-complete · next
+  LessonBlocks.tsx    Structured content renderer
+  DownloadTemplateButton.tsx  In-browser template download (Blob)
+  ContextCTA.tsx      Alternating Zero to Brand™ / mentorship upsell
+lib/starterKit.ts     Single source of truth: lessons, content, templates
+```
+
+The six lessons — **Brand Validation Framework**, **Product Research Checklist**, **Supplier Outreach Templates**, **Brand Positioning Canvas**, **Shopify Launch Checklist**, **AI Prompt Pack** — each ship with an estimated reading time, learning outcomes, a downloadable Markdown template, a completion toggle, and "Next lesson" navigation. Progress is stored per-visitor in `localStorage`.
+
 ## Notes
 
-- The email capture, newsletter and unlock CTAs are wired to client-side placeholders. Connect the capture to your email provider (e.g. ConvertKit, Loops, Resend) in `components/EmailCaptureForm.tsx`, and point the **"Unlock all 15 modules"** button (in `components/WelcomeContent.tsx`) at your real checkout URL.
+- The email capture, newsletter and unlock CTAs are wired to client-side placeholders. Connect the capture to your email provider (e.g. ConvertKit, Loops, Resend) in `components/EmailCaptureForm.tsx`.
+- Lesson content and templates live in `lib/starterKit.ts` — edit there to update any lesson.
+- Zero to Brand™ CTAs point at `/#zero-to-brand` for now; repoint them once the sales page and Stripe checkout exist.
 - The About portrait is a styled placeholder — drop in a real photo when available.

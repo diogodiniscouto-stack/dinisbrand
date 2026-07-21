@@ -136,6 +136,26 @@ export const Linkedin = (p: IconProps) => (
   </svg>
 );
 
+export const Clock = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <circle cx="12" cy="12" r="9" />
+    <path d="M12 7.5V12l3 2" />
+  </svg>
+);
+
+export const Download = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="M12 3v12M7 10l5 5 5-5" />
+    <path d="M5 21h14" />
+  </svg>
+);
+
+export const List = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01" />
+  </svg>
+);
+
 export const Lock = (p: IconProps) => (
   <svg {...base} {...p}>
     <rect x="4.5" y="10.5" width="15" height="10" rx="2.5" />
