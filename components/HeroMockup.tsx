@@ -1,6 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 import {
   Target,
   Compass,
@@ -29,21 +35,59 @@ const inside = [
   "Built for founders",
 ];
 
-/** Founder Toolkit dashboard mockup shown in the hero. */
+/** Interactive Founder Toolkit mockup — tilts toward the pointer, with a
+ *  highlight that travels down the tool list and floating accent cards. */
 export function HeroMockup() {
+  const mx = useMotionValue(0);
+  const my = useMotionValue(0);
+  const rotateY = useSpring(useTransform(mx, [-0.5, 0.5], [9, -9]), {
+    stiffness: 140,
+    damping: 16,
+  });
+  const rotateX = useSpring(useTransform(my, [-0.5, 0.5], [-7, 7]), {
+    stiffness: 140,
+    damping: 16,
+  });
+
+  const [active, setActive] = useState(0);
+  useEffect(() => {
+    const id = window.setInterval(
+      () => setActive((a) => (a + 1) % tools.length),
+      1700,
+    );
+    return () => window.clearInterval(id);
+  }, []);
+
+  function handleMove(e: React.MouseEvent<HTMLDivElement>) {
+    const rect = e.currentTarget.getBoundingClientRect();
+    mx.set((e.clientX - rect.left) / rect.width - 0.5);
+    my.set((e.clientY - rect.top) / rect.height - 0.5);
+  }
+  function handleLeave() {
+    mx.set(0);
+    my.set(0);
+  }
+
   return (
-    <div className="relative">
+    <div
+      onMouseMove={handleMove}
+      onMouseLeave={handleLeave}
+      className="relative [perspective:1300px]"
+    >
       <div
         aria-hidden
-        className="absolute -inset-8 -z-10 rounded-[3rem] bg-gradient-to-tr from-accent/10 via-accent/5 to-transparent blur-2xl"
+        className="absolute -inset-8 -z-10 rounded-[3rem] bg-gradient-to-tr from-accent/12 via-accent/5 to-transparent blur-2xl"
       />
 
       <motion.div
-        initial={{ opacity: 0, y: 28 }}
+        initial={{ opacity: 0, y: 26 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-        className="overflow-hidden rounded-3xl border border-neutral-200/80 bg-white shadow-float"
+        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+        style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+        className="relative"
       >
+        {/* Window (clips its own rounded corners) */}
+        <div className="overflow-hidden rounded-3xl border border-neutral-200/80 bg-white shadow-float">
         {/* Browser bar */}
         <div className="flex items-center gap-2 border-b border-neutral-100 bg-neutral-50/80 px-4 py-3">
           <div className="flex gap-1.5">
@@ -62,7 +106,7 @@ export function HeroMockup() {
 
         {/* Body */}
         <div className="grid grid-cols-1 gap-4 p-4 sm:grid-cols-5 sm:p-5">
-          {/* Tools list */}
+          {/* Tools */}
           <div className="sm:col-span-3">
             <div className="mb-3 flex items-center justify-between">
               <span className="text-sm font-semibold tracking-tight text-neutral-900">
@@ -73,26 +117,45 @@ export function HeroMockup() {
               </span>
             </div>
             <ul className="space-y-1.5">
-              {tools.map((tool, i) => (
-                <motion.li
-                  key={tool.label}
-                  initial={{ opacity: 0, x: -8 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4 + i * 0.07, duration: 0.5 }}
-                  className="flex items-center gap-3 rounded-xl border border-neutral-100 bg-white px-3 py-2.5 transition-colors hover:border-neutral-200"
-                >
-                  <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-accent/[0.08] text-accent">
-                    <tool.icon className="h-3.5 w-3.5" />
-                  </span>
-                  <span className="text-[0.82rem] font-medium text-neutral-700">
-                    {tool.label}
-                  </span>
-                </motion.li>
-              ))}
+              {tools.map((tool, i) => {
+                const isActive = i === active;
+                return (
+                  <motion.li
+                    key={tool.label}
+                    initial={{ opacity: 0, x: -8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.35 + i * 0.06, duration: 0.5 }}
+                    className={`flex items-center gap-3 rounded-xl border px-3 py-2.5 transition-colors duration-500 ${
+                      isActive
+                        ? "border-accent/30 bg-accent/[0.05]"
+                        : "border-neutral-100 bg-white"
+                    }`}
+                  >
+                    <span
+                      className={`flex h-7 w-7 items-center justify-center rounded-lg transition-colors duration-500 ${
+                        isActive
+                          ? "bg-accent text-white"
+                          : "bg-accent/[0.08] text-accent"
+                      }`}
+                    >
+                      <tool.icon className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="text-[0.82rem] font-medium text-neutral-700">
+                      {tool.label}
+                    </span>
+                    {isActive && (
+                      <motion.span
+                        layoutId="mockup-dot"
+                        className="ml-auto h-1.5 w-1.5 rounded-full bg-accent"
+                      />
+                    )}
+                  </motion.li>
+                );
+              })}
             </ul>
           </div>
 
-          {/* Side: progress + what's inside */}
+          {/* Side */}
           <div className="flex flex-col gap-4 sm:col-span-2">
             <div className="rounded-2xl border border-neutral-100 bg-gradient-to-b from-neutral-50/60 to-white p-4">
               <div className="mb-2 text-sm font-semibold tracking-tight text-neutral-900">
@@ -132,6 +195,36 @@ export function HeroMockup() {
             </div>
           </div>
         </div>
+        </div>
+
+        {/* Floating cards (parallax with tilt) */}
+        <motion.div
+          style={{ transform: "translateZ(60px)" }}
+          className="absolute -right-4 top-16 hidden animate-float rounded-2xl border border-neutral-200/70 bg-white/90 px-3 py-2 shadow-card backdrop-blur md:block"
+        >
+          <div className="flex items-center gap-2">
+            <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-emerald-50 text-emerald-500">
+              <Check className="h-3.5 w-3.5" strokeWidth={2.5} />
+            </span>
+            <span className="text-[0.72rem] font-semibold text-neutral-800">
+              Template copied
+            </span>
+          </div>
+        </motion.div>
+
+        <motion.div
+          style={{ transform: "translateZ(80px)", animationDelay: "1.4s" }}
+          className="absolute -left-5 bottom-14 hidden animate-float rounded-2xl border border-neutral-200/70 bg-white/90 px-3 py-2 shadow-card backdrop-blur md:block"
+        >
+          <div className="flex items-center gap-2">
+            <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-accent/10 text-accent">
+              <Calculator className="h-3.5 w-3.5" />
+            </span>
+            <span className="text-[0.72rem] font-semibold text-neutral-800">
+              62% margin
+            </span>
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   );
@@ -155,7 +248,7 @@ function ProgressRing({ value }: { value: number }) {
         strokeDasharray={c}
         initial={{ strokeDashoffset: c }}
         animate={{ strokeDashoffset: offset }}
-        transition={{ delay: 0.9, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ delay: 0.8, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
       />
     </svg>
   );

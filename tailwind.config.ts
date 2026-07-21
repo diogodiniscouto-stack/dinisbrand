@@ -67,10 +67,20 @@ const config: Config = {
         shimmer: {
           "100%": { transform: "translateX(100%)" },
         },
+        "neon-pulse": {
+          "0%, 100%": { opacity: "0.35" },
+          "50%": { opacity: "0.7" },
+        },
+        "neon-spin": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards",
         float: "float 6s ease-in-out infinite",
+        "neon-pulse": "neon-pulse 3.2s ease-in-out infinite",
+        "neon-spin": "neon-spin 6s linear infinite",
       },
     },
   },

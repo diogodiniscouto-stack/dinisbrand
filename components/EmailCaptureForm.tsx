@@ -50,7 +50,7 @@ export function EmailCaptureForm({
       <form
         onSubmit={handleSubmit}
         className={cn(
-          "flex flex-col gap-2 rounded-[1.4rem] border border-neutral-200/80 bg-white p-2 shadow-card sm:flex-row sm:items-center sm:rounded-full",
+          "flex flex-col gap-2 rounded-[1.4rem] bg-white p-2 sm:flex-row sm:items-center sm:rounded-full",
           className,
         )}
       >
