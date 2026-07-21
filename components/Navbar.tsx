@@ -8,10 +8,7 @@ import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { label: "Resources", href: "#resources" },
-  { label: "Zero to Brand™", href: "#zero-to-brand" },
-  { label: "Mentorship", href: "#mentorship" },
   { label: "Newsletter", href: "#newsletter" },
-  { label: "About", href: "#about" },
 ];
 
 export function Navbar() {
@@ -67,8 +64,8 @@ export function Navbar() {
 
         {/* CTA + mobile toggle */}
         <div className="flex items-center gap-2">
-          <Button href="#starter-kit" size="sm" className="hidden sm:inline-flex">
-            Get Free Starter Kit
+          <Button href="#top" size="sm" className="hidden sm:inline-flex">
+            Get Free Founder Toolkit
           </Button>
           <button
             onClick={() => setOpen((v) => !v)}
@@ -122,11 +119,11 @@ export function Navbar() {
                 </Link>
               ))}
               <Button
-                href="#starter-kit"
+                href="#top"
                 className="mt-2 w-full"
                 onClick={() => setOpen(false)}
               >
-                Get Free Starter Kit
+                Get Free Founder Toolkit
               </Button>
             </div>
           </motion.div>

@@ -136,6 +136,14 @@ export const Linkedin = (p: IconProps) => (
   </svg>
 );
 
+export const Gift = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <rect x="3.5" y="8.5" width="17" height="4" rx="1.5" />
+    <path d="M5 12.5V20a1 1 0 001 1h12a1 1 0 001-1v-7.5M12 8.5V21" />
+    <path d="M12 8.5H8.2a2.2 2.2 0 010-4.4C11 4.1 12 8.5 12 8.5zM12 8.5h3.8a2.2 2.2 0 000-4.4C13 4.1 12 8.5 12 8.5z" />
+  </svg>
+);
+
 export const Grid = (p: IconProps) => (
   <svg {...base} {...p}>
     <rect x="3.5" y="3.5" width="7" height="7" rx="1.8" />

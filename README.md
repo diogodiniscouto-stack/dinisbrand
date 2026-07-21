@@ -51,9 +51,9 @@ lib/
   utils.ts          Helpers
 ```
 
-## Sections
+## Landing page
 
-Navbar · Hero · Trusted System · Free Starter Kit · Zero to Brand™ · Mentorship · About · Newsletter · Footer
+Conversion-focused and distraction-free: **Navbar** (Resources · Newsletter · *Get Free Founder Toolkit*) → **Hero** (large email capture for the Free Founder Toolkit, toolkit dashboard mockup, handwritten annotations) → **Inside the Founder Toolkit** (7 tool cards) → **Zero to Brand™** teaser (15 modules · 72 frameworks · 40+ templates) → **Newsletter** → **Footer**. The hero email capture redirects to `/toolkit`.
 
 ## Funnel
 

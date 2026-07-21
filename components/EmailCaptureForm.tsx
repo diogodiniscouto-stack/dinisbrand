@@ -8,15 +8,17 @@ import { cn } from "@/lib/utils";
 /**
  * Email capture used across the funnel. On submit it (placeholder) hands the
  * email to your provider and sends the visitor straight into the free
- * members area at /welcome.
+ * Founder Toolkit at /toolkit.
  */
 export function EmailCaptureForm({
   theme = "light",
-  buttonLabel = "Get the free starter kit",
-  placeholder = "you@company.com",
+  size = "default",
+  buttonLabel = "Get the Free Founder Toolkit",
+  placeholder = "Enter your email address...",
   className,
 }: {
   theme?: "light" | "dark";
+  size?: "default" | "hero";
   buttonLabel?: string;
   placeholder?: string;
   className?: string;
@@ -37,10 +39,43 @@ export function EmailCaptureForm({
         /* ignore storage errors */
       }
     }
-    router.push("/welcome");
+    router.push("/toolkit");
   }
 
   const dark = theme === "dark";
+
+  // Large, premium unified pill for the hero.
+  if (size === "hero") {
+    return (
+      <form
+        onSubmit={handleSubmit}
+        className={cn(
+          "flex flex-col gap-2 rounded-[1.4rem] border border-neutral-200/80 bg-white p-2 shadow-card sm:flex-row sm:items-center sm:rounded-full",
+          className,
+        )}
+      >
+        <input
+          type="email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder={placeholder}
+          aria-label="Email address"
+          className="h-14 flex-1 rounded-full bg-transparent px-5 text-[1.02rem] text-neutral-900 outline-none placeholder:text-neutral-400 sm:px-6"
+        />
+        <button
+          type="submit"
+          disabled={loading}
+          className="group inline-flex h-14 shrink-0 items-center justify-center gap-2 rounded-full bg-accent px-7 text-[1.02rem] font-semibold text-white shadow-[0_10px_30px_-10px_rgba(59,91,255,0.6)] transition-all duration-300 hover:bg-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 active:scale-[0.99] disabled:opacity-70"
+        >
+          {loading ? "Sending…" : buttonLabel}
+          {!loading && (
+            <ArrowRight className="h-[1.1rem] w-[1.1rem] transition-transform duration-300 group-hover:translate-x-0.5" />
+          )}
+        </button>
+      </form>
+    );
+  }
 
   return (
     <form

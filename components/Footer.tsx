@@ -4,20 +4,20 @@ import { Linkedin } from "./Icons";
 
 const columns = [
   {
-    title: "Product",
+    title: "Toolkit",
     links: [
-      { label: "Resources", href: "/#resources" },
-      { label: "Roadmaps", href: "/#zero-to-brand" },
-      { label: "Newsletter", href: "/#newsletter" },
-      { label: "Mentorship", href: "/#mentorship" },
+      { label: "Founder Toolkit", href: "/toolkit" },
+      { label: "Product Validation", href: "/toolkit/product-validation" },
+      { label: "AI Prompt Library", href: "/toolkit/ai-prompts" },
+      { label: "Profit Calculator", href: "/toolkit/profit-calculator" },
     ],
   },
   {
-    title: "Company",
+    title: "Explore",
     links: [
-      { label: "About", href: "/#about" },
-      { label: "Starter Kit", href: "/#starter-kit" },
+      { label: "Resources", href: "/#resources" },
       { label: "Zero to Brand™", href: "/#zero-to-brand" },
+      { label: "Newsletter", href: "/#newsletter" },
     ],
   },
 ];
