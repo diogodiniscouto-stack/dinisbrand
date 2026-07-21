@@ -19,6 +19,18 @@ const config: Config = {
           600: "#2563EB",
           700: "#1D4ED8",
         },
+        // Founder Toolkit accent
+        accent: {
+          DEFAULT: "#3B5BFF",
+          50: "#EEF1FF",
+          100: "#E0E6FF",
+          200: "#C7D1FF",
+          300: "#A5B4FF",
+          400: "#7C8FFF",
+          500: "#3B5BFF",
+          600: "#2E48E6",
+          700: "#2439B4",
+        },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],

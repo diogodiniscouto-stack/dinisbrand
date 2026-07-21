@@ -78,6 +78,35 @@ export function WelcomeOverview() {
         </Link>
       </motion.div>
 
+      {/* Founder Toolkit cross-link */}
+      <motion.div variants={fadeUp}>
+        <Link
+          href="/toolkit"
+          className="group flex items-center justify-between gap-4 rounded-3xl border border-neutral-900 bg-neutral-950 p-5 shadow-card transition-transform duration-300 hover:-translate-y-0.5 sm:p-6"
+        >
+          <div className="flex items-center gap-4">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-primary-300">
+              <Sparkle className="h-5 w-5" />
+            </span>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="rounded-full bg-white/10 px-2 py-0.5 text-[0.62rem] font-semibold uppercase tracking-wide text-white/70">
+                  New
+                </span>
+                <h3 className="text-[1.02rem] font-semibold tracking-tight text-white">
+                  Open the interactive Founder Toolkit
+                </h3>
+              </div>
+              <p className="mt-1 max-w-md text-sm leading-relaxed text-white/55">
+                Editable frameworks, a profit calculator, an AI prompt library
+                and more — put the lessons into practice.
+              </p>
+            </div>
+          </div>
+          <ArrowRight className="hidden h-5 w-5 shrink-0 text-white/60 transition-transform duration-300 group-hover:translate-x-0.5 sm:block" />
+        </Link>
+      </motion.div>
+
       {/* Lessons grid */}
       <motion.div variants={fadeUp} className="flex flex-col gap-4">
         <div className="flex items-center justify-between">
