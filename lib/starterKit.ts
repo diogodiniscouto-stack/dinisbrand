@@ -36,7 +36,7 @@ export const lessons: Lesson[] = [
     number: 1,
     title: "Brand Validation Framework",
     summary:
-      "Validate that people actually want what you're about to sell — before you spend a cent on inventory or ads.",
+      "Validate that people actually want what you're about to sell, before you spend a cent on inventory or ads.",
     icon: ShieldCheck,
     readingTime: "7 min read",
     outcomes: [
@@ -77,7 +77,7 @@ Total: ___ / 25
       { type: "h", text: "Why validation comes first" },
       {
         type: "p",
-        text: "Most brands don't fail at execution — they fail because nobody wanted the product in the first place. Validation is how you buy certainty cheaply. A weekend of tests can save you six months and thousands of euros in inventory.",
+        text: "Most brands don't fail at execution, they fail because nobody wanted the product in the first place. Validation is how you buy certainty cheaply. A weekend of tests can save you six months and thousands of euros in inventory.",
       },
       {
         type: "p",
@@ -93,7 +93,7 @@ Total: ___ / 25
           },
           {
             title: "Differentiation",
-            text: "Can you offer a clearly better angle — better positioning, audience, or experience — not just another me-too product?",
+            text: "Can you offer a clearly better angle, better positioning, audience, or experience, not just another me-too product?",
           },
           {
             title: "Margin",
@@ -105,7 +105,7 @@ Total: ___ / 25
           },
           {
             title: "Passion",
-            text: "Will you still care in 12 months? Brands are a long game — genuine interest is what carries you through the boring middle.",
+            text: "Will you still care in 12 months? Brands are a long game, genuine interest is what carries you through the boring middle.",
           },
         ],
       },
@@ -118,7 +118,7 @@ Total: ___ / 25
       {
         type: "checklist",
         items: [
-          "Talk to 20 potential customers — DMs, communities, or in person",
+          "Talk to 20 potential customers, DMs, communities, or in person",
           "Build one simple landing page with a waitlist or pre-order button",
           "Drive a little traffic (organic posts or ~€50 of ads)",
           "Measure opt-in rate and count how many say they'd actually pay",
@@ -126,7 +126,7 @@ Total: ___ / 25
       },
       {
         type: "p",
-        text: "Download the scorecard below, run your idea through it, and only move forward when the evidence — not the excitement — tells you to.",
+        text: "Download the scorecard below, run your idea through it, and only move forward when the evidence, not the excitement, tells you to.",
       },
     ],
   },
@@ -152,7 +152,7 @@ Total: ___ / 25
 - [ ] Trending communities (Reddit, TikTok, niche forums)
 - [ ] Amazon Movers & Shakers + "Best Sellers" by category
 - [ ] Google Trends (12-month, rising not fading)
-- [ ] Competitor catalogues — what's sold out or reviewed most
+- [ ] Competitor catalogues, what's sold out or reviewed most
 
 ## Demand check
 - [ ] Steady or rising search volume
@@ -181,16 +181,16 @@ Total: ___ / 25
       { type: "h", text: "Research beats inspiration" },
       {
         type: "p",
-        text: "Good products aren't found in a flash of genius — they're found by systematically following signals. Your job is to gather enough evidence that demand exists and the numbers work, then move.",
+        text: "Good products aren't found in a flash of genius, they're found by systematically following signals. Your job is to gather enough evidence that demand exists and the numbers work, then move.",
       },
       { type: "h", text: "Where to look" },
       {
         type: "list",
         items: [
           "Communities where your future customers already hang out",
-          "Marketplaces — bestsellers, movers, and heavily-reviewed items",
+          "Marketplaces, bestsellers, movers, and heavily-reviewed items",
           "Trend tools to confirm interest is rising, not fading",
-          "Competitor stores — what's sold out or reviewed the most",
+          "Competitor stores, what's sold out or reviewed the most",
         ],
       },
       { type: "h", text: "The three filters" },
@@ -199,7 +199,7 @@ Total: ___ / 25
         items: [
           {
             title: "Demand",
-            text: "Proven interest and a few profitable competitors. Competition is a signal that money is being made — not a reason to stop.",
+            text: "Proven interest and a few profitable competitors. Competition is a signal that money is being made, not a reason to stop.",
           },
           {
             title: "Economics",
@@ -214,7 +214,7 @@ Total: ___ / 25
       {
         type: "callout",
         title: "Avoid the trap",
-        text: "A saturated market full of identical dropshippers with 2x margins isn't an opportunity — it's a race to the bottom. Look for demand you can serve differently.",
+        text: "A saturated market full of identical dropshippers with 2x margins isn't an opportunity, it's a race to the bottom. Look for demand you can serve differently.",
       },
       {
         type: "p",
@@ -227,7 +227,7 @@ Total: ___ / 25
     number: 3,
     title: "Supplier Outreach Templates",
     summary:
-      "Find reliable suppliers and open the conversation like a professional buyer — with scripts you can copy and send today.",
+      "Find reliable suppliers and open the conversation like a professional buyer, with scripts you can copy and send today.",
     icon: Box,
     readingTime: "6 min read",
     outcomes: [
@@ -241,7 +241,7 @@ Total: ___ / 25
       content: `# Supplier Outreach Templates
 
 ## 1. First contact
-Subject: Wholesale enquiry — [Product] for our brand
+Subject: Wholesale enquiry, [Product] for our brand
 
 Hi [Name],
 
@@ -256,7 +256,7 @@ Could you share:
 
 Looking forward to working together.
 
-[Your name] — [Brand], [website]
+[Your name], [Brand], [website]
 
 ## 2. Sample request
 Hi [Name], the specs look great. I'd like to order a sample of [variant]
@@ -322,7 +322,7 @@ order this week and reorder monthly if sell-through is strong.
     number: 4,
     title: "Brand Positioning Canvas",
     summary:
-      "Define the one angle that makes your brand the obvious choice for a specific person — so you never compete on price alone.",
+      "Define the one angle that makes your brand the obvious choice for a specific person, so you never compete on price alone.",
     icon: Compass,
     readingTime: "7 min read",
     outcomes: [
@@ -367,7 +367,7 @@ We never sound: ______ (e.g. hypey, corporate, salesy).
       { type: "h", text: "Positioning is a choice, not a slogan" },
       {
         type: "p",
-        text: "Positioning is deciding who you're for, what you stand for, and why you're different — before you write a single line of copy. Get it right and marketing becomes easy. Get it wrong and no amount of ad spend saves you.",
+        text: "Positioning is deciding who you're for, what you stand for, and why you're different, before you write a single line of copy. Get it right and marketing becomes easy. Get it wrong and no amount of ad spend saves you.",
       },
       { type: "h", text: "The five inputs" },
       {
@@ -387,7 +387,7 @@ We never sound: ______ (e.g. hypey, corporate, salesy).
           },
           {
             title: "Reason to believe",
-            text: "Proof that makes the benefit credible — process, ingredient, founder story, or guarantee.",
+            text: "Proof that makes the benefit credible, process, ingredient, founder story, or guarantee.",
           },
           {
             title: "The alternative",
@@ -411,7 +411,7 @@ We never sound: ______ (e.g. hypey, corporate, salesy).
     number: 5,
     title: "Shopify Launch Checklist",
     summary:
-      "Everything that has to be true before you flip your store live — so you launch fast without leaving conversions on the table.",
+      "Everything that has to be true before you flip your store live, so you launch fast without leaving conversions on the table.",
     icon: Store,
     readingTime: "9 min read",
     outcomes: [
@@ -460,7 +460,7 @@ We never sound: ______ (e.g. hypey, corporate, salesy).
       { type: "h", text: "Launch fast, but launch trustworthy" },
       {
         type: "p",
-        text: "You don't need a perfect store — you need a credible one. Shoppers decide in seconds whether you look legit. This checklist covers the essentials that build trust and the conversion details beginners skip.",
+        text: "You don't need a perfect store, you need a credible one. Shoppers decide in seconds whether you look legit. This checklist covers the essentials that build trust and the conversion details beginners skip.",
       },
       { type: "h", text: "The four layers" },
       {
@@ -536,14 +536,14 @@ Keep replies concrete, no hype, no filler.
 
 ## Tip
 Always give AI your brand brief, real inputs, and a clear format. Vague in,
-vague out. You're the editor — never ship a first draft unread.
+vague out. You're the editor, never ship a first draft unread.
 `,
     },
     blocks: [
       { type: "h", text: "AI is leverage, not autopilot" },
       {
         type: "p",
-        text: "Used well, AI compresses hours of research, writing, and planning into minutes — so a solo founder can move like a team. Used lazily, it produces generic sludge. The difference is how you brief it.",
+        text: "Used well, AI compresses hours of research, writing, and planning into minutes, so a solo founder can move like a team. Used lazily, it produces generic sludge. The difference is how you brief it.",
       },
       { type: "h", text: "The three rules" },
       {
@@ -551,7 +551,7 @@ vague out. You're the editor — never ship a first draft unread.
         items: [
           {
             title: "Always brief the brand",
-            text: "Paste a short brand brief — who you are, who you serve, your voice — at the start of every session. Context is everything.",
+            text: "Paste a short brand brief, who you are, who you serve, your voice, at the start of every session. Context is everything.",
           },
           {
             title: "Feed it real inputs",

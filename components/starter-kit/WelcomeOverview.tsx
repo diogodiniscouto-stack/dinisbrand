@@ -43,7 +43,7 @@ export function WelcomeOverview() {
           Welcome to your Starter Kit
         </h1>
         <p className="max-w-xl text-pretty text-lg leading-relaxed text-neutral-500">
-          Six focused lessons with downloadable templates — everything you need
+          Six focused lessons with downloadable templates, everything you need
           to validate an idea and lay the foundation of a real, profitable
           ecommerce brand. Work through them in order, at your own pace.
         </p>
@@ -99,7 +99,7 @@ export function WelcomeOverview() {
               </div>
               <p className="mt-1 max-w-md text-sm leading-relaxed text-white/55">
                 Editable frameworks, a profit calculator, an AI prompt library
-                and more — put the lessons into practice.
+                and more, put the lessons into practice.
               </p>
             </div>
           </div>

@@ -18,7 +18,7 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   metadataBase: new URL("https://dinisbrands.com"),
   title: {
-    default: "Diogo Dinis — Build Profitable Ecommerce Brands",
+    default: "Diogo Dinis: Build Profitable Ecommerce Brands",
     template: "%s · Diogo Dinis",
   },
   description:
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Diogo Dinis" }],
   creator: "Diogo Dinis",
   openGraph: {
-    title: "Diogo Dinis — Build Profitable Ecommerce Brands",
+    title: "Diogo Dinis: Build Profitable Ecommerce Brands",
     description:
       "Practical frameworks, templates and systems to help ambitious founders launch and grow real ecommerce brands.",
     url: "https://dinisbrands.com",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Diogo Dinis — Build Profitable Ecommerce Brands",
+    title: "Diogo Dinis: Build Profitable Ecommerce Brands",
     description:
       "Practical frameworks, templates and systems to help ambitious founders launch and grow real ecommerce brands.",
   },

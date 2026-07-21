@@ -20,7 +20,7 @@ export function ResourceLibrary() {
       <ToolHeader
         index="07 · Directory"
         title="Resource Library"
-        description="The tools every ecommerce founder should have bookmarked — sourcing, design, AI, marketing and research, all in one place."
+        description="The tools every ecommerce founder should have bookmarked, sourcing, design, AI, marketing and research, all in one place."
       />
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">

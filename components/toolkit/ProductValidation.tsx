@@ -48,7 +48,7 @@ export function ProductValidation() {
       <ToolHeader
         index="01 · Framework"
         title="Product Validation Scorecard"
-        description="Score any product idea across six make-or-break factors, then read the verdict. Rate each 1–10 and add your notes — everything saves automatically."
+        description="Score any product idea across six make-or-break factors, then read the verdict. Rate each 1–10 and add your notes, everything saves automatically."
         printable
         onReset={() => setState(initial)}
       />

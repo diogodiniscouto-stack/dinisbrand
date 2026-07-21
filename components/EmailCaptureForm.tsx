@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 export function EmailCaptureForm({
   theme = "light",
   size = "default",
-  buttonLabel = "Get the Free Founder Toolkit",
+  buttonLabel = "Build My Brand",
   placeholder = "Enter your email address...",
   className,
 }: {
@@ -66,11 +66,16 @@ export function EmailCaptureForm({
         <button
           type="submit"
           disabled={loading}
-          className="group inline-flex h-14 shrink-0 items-center justify-center gap-2 rounded-full bg-accent px-7 text-[1.02rem] font-semibold text-white shadow-[0_10px_30px_-10px_rgba(59,91,255,0.6)] transition-all duration-300 hover:bg-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 active:scale-[0.99] disabled:opacity-70"
+          className="group/btn relative inline-flex h-14 shrink-0 items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-accent to-[#5B7BFF] px-7 text-[1.02rem] font-semibold text-white shadow-[0_12px_34px_-10px_rgba(59,91,255,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_-10px_rgba(59,91,255,0.85)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 active:translate-y-0 active:scale-[0.99] disabled:opacity-70"
         >
-          {loading ? "Sending…" : buttonLabel}
+          {/* Shine sweep on hover */}
+          <span
+            aria-hidden
+            className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 ease-out group-hover/btn:translate-x-full"
+          />
+          <span className="relative">{loading ? "Sending…" : buttonLabel}</span>
           {!loading && (
-            <ArrowRight className="h-[1.1rem] w-[1.1rem] transition-transform duration-300 group-hover:translate-x-0.5" />
+            <ArrowRight className="relative h-[1.1rem] w-[1.1rem] transition-transform duration-300 group-hover/btn:translate-x-0.5" />
           )}
         </button>
       </form>

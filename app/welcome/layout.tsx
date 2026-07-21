@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     template: "%s · Starter Kit · Diogo Dinis",
   },
   description:
-    "Your private Zero to Brand™ Starter Kit — six lessons and downloadable templates to validate and launch a profitable ecommerce brand.",
+    "Your private Zero to Brand™ Starter Kit, six lessons and downloadable templates to validate and launch a profitable ecommerce brand.",
   robots: { index: false, follow: false },
 };
 

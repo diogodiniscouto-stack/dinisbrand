@@ -5,7 +5,7 @@ import { Download, Check } from "@/components/Icons";
 import { cn } from "@/lib/utils";
 
 /**
- * Generates the template file in the browser and triggers a download — no
+ * Generates the template file in the browser and triggers a download, no
  * server or static asset needed.
  */
 export function DownloadTemplateButton({

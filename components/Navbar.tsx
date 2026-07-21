@@ -39,7 +39,7 @@ export function Navbar() {
         <Link
           href="#top"
           className="group flex items-center gap-2.5 pl-1"
-          aria-label="Diogo Dinis — home"
+          aria-label="Diogo Dinis: home"
         >
           <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-neutral-900 text-sm font-semibold text-white shadow-soft transition-transform duration-300 group-hover:scale-105">
             D

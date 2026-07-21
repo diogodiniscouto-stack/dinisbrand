@@ -10,7 +10,7 @@ export function SupplierTemplates() {
       <ToolHeader
         index="03 · Templates"
         title="Supplier Outreach Templates"
-        description="Seven ready-to-send emails for every stage of sourcing — from first contact to final agreement. Copy, swap the [brackets], and send."
+        description="Seven ready-to-send emails for every stage of sourcing, from first contact to final agreement. Copy, swap the [brackets], and send."
         printable
       />
 

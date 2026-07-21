@@ -3,7 +3,7 @@
 import { Printer, RotateCcw } from "@/components/Icons";
 
 /**
- * Shared header for every tool page — number, title, description, and
+ * Shared header for every tool page, number, title, description, and
  * optional print / reset actions (hidden when printing).
  */
 export function ToolHeader({

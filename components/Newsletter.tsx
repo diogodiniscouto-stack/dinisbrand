@@ -53,7 +53,7 @@ export function Newsletter() {
               variants={fadeUp}
               className="mt-5 max-w-md text-pretty text-base leading-relaxed text-neutral-500"
             >
-              One practical email a week — frameworks, breakdowns and the systems
+              One practical email a week, frameworks, breakdowns and the systems
               behind real ecommerce brands. No hype.
             </motion.p>
 
@@ -63,7 +63,7 @@ export function Newsletter() {
                   <span className="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-white">
                     <Check className="h-3.5 w-3.5" strokeWidth={2.5} />
                   </span>
-                  You&apos;re in — check your inbox to confirm.
+                  You&apos;re in, check your inbox to confirm.
                 </div>
               ) : (
                 <form

@@ -15,7 +15,6 @@ const kitItems = [
   "Proven Frameworks",
   "Ready-to-Use Templates",
   "AI Prompts",
-  "Resource Library",
 ];
 
 export function Hero() {
@@ -48,7 +47,7 @@ export function Hero() {
               Free Founder Toolkit
             </motion.span>
 
-            {/* Headline — fluid size so it never overflows the column */}
+            {/* Headline, fluid size so it never overflows the column */}
             <motion.h1
               variants={fadeUp}
               className="mt-7 text-balance font-semibold leading-[1.02] tracking-tightest text-neutral-900"
@@ -159,29 +158,51 @@ export function Hero() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mb-4 flex flex-col items-start gap-4 rounded-3xl border border-neutral-200/70 bg-neutral-50/60 p-6 sm:flex-row sm:items-center sm:gap-6"
+          className="group/bar relative mb-4 overflow-hidden rounded-[1.75rem] border border-neutral-200/70 bg-white p-6 shadow-soft transition-shadow duration-500 hover:shadow-card sm:p-7"
         >
-          <div className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/10 text-accent">
-              <Gift className="h-5 w-5" />
-            </span>
-            <span className="text-[0.95rem] font-semibold tracking-tight text-neutral-900">
-              In the Free Founder Toolkit,
-              <br className="hidden sm:block" /> you&apos;ll get:
-            </span>
+          {/* Ambient accent wash */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-accent/5 blur-3xl transition-opacity duration-500 group-hover/bar:opacity-100"
+          />
+          <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
+            {/* Label */}
+            <div className="flex items-center gap-3.5">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-accent/10 text-accent transition-transform duration-500 group-hover/bar:scale-105">
+                <Gift className="h-[1.35rem] w-[1.35rem]" />
+              </span>
+              <div>
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-accent">
+                  Free Founder Toolkit
+                </p>
+                <p className="mt-0.5 text-[1.05rem] font-semibold tracking-tight text-neutral-900">
+                  Inside, you&apos;ll get:
+                </p>
+              </div>
+            </div>
+
+            {/* Interactive chips */}
+            <ul className="flex flex-wrap gap-2.5">
+              {kitItems.map((item, i) => (
+                <motion.li
+                  key={item}
+                  initial={{ opacity: 0, y: 8 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 + i * 0.08, duration: 0.5 }}
+                >
+                  <span className="group/chip flex cursor-default items-center gap-2 rounded-full border border-neutral-200 bg-white px-3.5 py-2 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/30 hover:bg-accent/[0.04] hover:shadow-card">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-accent transition-colors duration-300 group-hover/chip:bg-accent group-hover/chip:text-white">
+                      <Check className="h-3 w-3" strokeWidth={3} />
+                    </span>
+                    <span className="text-sm font-medium text-neutral-700 transition-colors duration-300 group-hover/chip:text-neutral-900">
+                      {item}
+                    </span>
+                  </span>
+                </motion.li>
+              ))}
+            </ul>
           </div>
-          <ul className="flex flex-wrap items-center gap-x-6 gap-y-2">
-            {kitItems.map((item) => (
-              <li key={item} className="flex items-center gap-2">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-accent">
-                  <Check className="h-3 w-3" strokeWidth={3} />
-                </span>
-                <span className="text-sm font-medium text-neutral-600">
-                  {item}
-                </span>
-              </li>
-            ))}
-          </ul>
         </motion.div>
       </Container>
     </section>

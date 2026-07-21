@@ -35,7 +35,7 @@ export function Dashboard() {
           Welcome to the Founder Toolkit.
         </h1>
         <p className="max-w-xl text-pretty text-lg leading-relaxed text-neutral-500">
-          Everything you need to start building your ecommerce brand — for free.
+          Everything you need to start building your ecommerce brand, for free.
           Editable frameworks, interactive tools and copy-paste resources, all
           in one place.
         </p>
@@ -102,7 +102,7 @@ export function Dashboard() {
             </h3>
             <p className="mt-2 max-w-md text-sm leading-relaxed text-white/60">
               This toolkit is the foundation. The complete roadmap takes you all
-              the way — 15 modules from idea to a brand that runs like a company.
+              the way, 15 modules from idea to a brand that runs like a company.
             </p>
           </div>
           <Link

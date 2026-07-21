@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Map, Calendar, ArrowRight } from "@/components/Icons";
 
 /**
- * Elegant contextual upsell used between lessons — alternating between the
+ * Elegant contextual upsell used between lessons, alternating between the
  * paid roadmap and 1:1 mentorship to build trust before any purchase.
  */
 export function ContextCTA({ variant }: { variant: "roadmap" | "mentorship" }) {
@@ -31,7 +31,7 @@ export function ContextCTA({ variant }: { variant: "roadmap" | "mentorship" }) {
             </h3>
             <p className="mt-1 max-w-md text-sm leading-relaxed text-white/60">
               {isRoadmap
-                ? "This kit is the foundation. Zero to Brand™ is all 15 modules — from suppliers and content to retention, finance and running your brand like a company."
+                ? "This kit is the foundation. Zero to Brand™ is all 15 modules, from suppliers and content to retention, finance and running your brand like a company."
                 : "1:1 mentorship includes the full roadmap, weekly calls and line-by-line reviews of your store as you build."}
             </p>
           </div>

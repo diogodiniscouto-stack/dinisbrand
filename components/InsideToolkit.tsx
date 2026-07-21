@@ -48,7 +48,7 @@ const items = [
   {
     icon: Store,
     title: "Shopify Launch Checklist",
-    desc: "Every box to tick before you launch — with a live progress bar.",
+    desc: "Every box to tick before you launch, with a live progress bar.",
     href: "/toolkit/shopify-checklist",
     tag: "Checklist",
   },
@@ -75,7 +75,7 @@ export function InsideToolkit() {
         <SectionHeading
           eyebrow="Free Founder Toolkit"
           title="Inside the Founder Toolkit"
-          description="Seven practical, interactive tools to take you from a raw idea to a launch-ready brand — free, forever."
+          description="Seven practical, interactive tools to take you from a raw idea to a launch-ready brand, free, forever."
         />
 
         <motion.div
@@ -126,7 +126,7 @@ export function InsideToolkit() {
             href="#top"
             className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-[0.98rem] font-semibold text-white shadow-[0_10px_30px_-10px_rgba(59,91,255,0.6)] transition-all duration-300 hover:bg-accent-600 active:scale-[0.98]"
           >
-            Get the Free Founder Toolkit
+            Build My Brand
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
           </Link>
         </motion.div>

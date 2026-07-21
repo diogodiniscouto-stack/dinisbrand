@@ -75,7 +75,7 @@ export function ProfitCalculator() {
         {/* Inputs */}
         <div className="rounded-3xl border border-neutral-200/70 bg-white p-6 shadow-soft">
           <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.14em] text-neutral-400">
-            Inputs — per order
+            Inputs: per order
           </h3>
           <div className="flex flex-col gap-3">
             {fields.map((f) => (
@@ -118,7 +118,7 @@ export function ProfitCalculator() {
           >
             <div className="flex items-center gap-2 text-sm font-medium text-white/80">
               <TrendingUp className="h-4 w-4" />
-              Net Profit — per order
+              Net Profit: per order
             </div>
             <div className="mt-2 text-4xl font-semibold tracking-tighter">
               {eur(netProfit)}
@@ -143,7 +143,7 @@ export function ProfitCalculator() {
               value={
                 Number.isFinite(breakEvenRoas)
                   ? `${breakEvenRoas.toFixed(2)}x`
-                  : "—"
+                  : "n/a"
               }
             />
             <Metric
@@ -153,7 +153,7 @@ export function ProfitCalculator() {
           </div>
 
           <p className="px-1 text-xs leading-relaxed text-neutral-400">
-            Break-even ROAS is the ad return you need just to cover costs — spend
+            Break-even ROAS is the ad return you need just to cover costs, spend
             below it and every sale loses money. Aim comfortably above it.
           </p>
         </div>

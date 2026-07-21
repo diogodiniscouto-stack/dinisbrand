@@ -1,4 +1,4 @@
-// Founder Toolkit — data source of truth (content, no UI).
+// Founder Toolkit, data source of truth (content, no UI).
 
 /* 01 · Product Validation Scorecard */
 export const validationRows: {
@@ -32,7 +32,7 @@ export const validationRows: {
 ];
 
 export const validationBands = [
-  { min: 0, max: 23, label: "Poor", tone: "red" as const, note: "Reconsider — the fundamentals aren't there yet." },
+  { min: 0, max: 23, label: "Poor", tone: "red" as const, note: "Reconsider, the fundamentals aren't there yet." },
   { min: 24, max: 35, label: "Average", tone: "amber" as const, note: "Workable, but sharpen the weak categories first." },
   { min: 36, max: 49, label: "Good", tone: "blue" as const, note: "Strong candidate. Move to product research." },
   { min: 50, max: 60, label: "Excellent", tone: "green" as const, note: "Rare opportunity. Build with conviction." },
@@ -72,7 +72,7 @@ export const supplierTemplates: {
     id: "alibaba-first",
     title: "Alibaba First Contact",
     tag: "Sourcing",
-    subject: "Wholesale enquiry — [Product] for our brand",
+    subject: "Wholesale enquiry, [Product] for our brand",
     body: `Hi [Name],
 
 I'm sourcing [product] for our brand, [Brand]. We're preparing our first production run and building a shortlist of long-term suppliers.
@@ -86,14 +86,14 @@ Could you please share:
 We plan to reorder monthly once sell-through is proven. Looking forward to working together.
 
 Best,
-[Your name] — [Brand]
+[Your name], [Brand]
 [website]`,
   },
   {
     id: "european",
     title: "European Supplier",
     tag: "Sourcing",
-    subject: "Partnership enquiry — [Brand] ([Country])",
+    subject: "Partnership enquiry, [Brand] ([Country])",
     body: `Hello [Name],
 
 We're [Brand], a growing ecommerce brand based in [Country]. We're looking for a reliable European supplier for [product] to shorten lead times and support local stock.
@@ -108,13 +108,13 @@ Happy to jump on a quick call if easier.
 
 Kind regards,
 [Your name]
-[Brand] — [website]`,
+[Brand], [website]`,
   },
   {
     id: "sample",
     title: "Sample Request",
     tag: "Quality",
-    subject: "Sample order — [Product] / [Variant]",
+    subject: "Sample order, [Product] / [Variant]",
     body: `Hi [Name],
 
 The specs look great. Before our first bulk order I'd like to order a sample of [variant] to check quality and finish.
@@ -127,7 +127,7 @@ Please share:
 If quality matches, our opening order would be around [qty], with monthly reorders.
 
 Thanks,
-[Your name] — [Brand]`,
+[Your name], [Brand]`,
   },
   {
     id: "moq",
@@ -145,13 +145,13 @@ Would you be open to:
 We're building for the long term and want you as our main supplier. What can we make work?
 
 Best,
-[Your name] — [Brand]`,
+[Your name], [Brand]`,
   },
   {
     id: "price",
     title: "Price Negotiation",
     tag: "Negotiation",
-    subject: "Pricing for [qty] units — [Product]",
+    subject: "Pricing for [qty] units, [Product]",
     body: `Hi [Name],
 
 Quality looks strong and we're ready to move. To make the unit economics work at [qty], I'm aiming for [target price]/unit.
@@ -161,13 +161,13 @@ If we can meet there, I'll place the order this week and commit to reordering [c
 Can we agree on [target price]?
 
 Thanks,
-[Your name] — [Brand]`,
+[Your name], [Brand]`,
   },
   {
     id: "follow-up",
     title: "Follow-up",
     tag: "Ops",
-    subject: "Following up — [Product] quote",
+    subject: "Following up, [Product] quote",
     body: `Hi [Name],
 
 Just following up on my message about [product]. We're finalising suppliers this week and would love to include you.
@@ -175,13 +175,13 @@ Just following up on my message about [product]. We're finalising suppliers this
 If you can share [MOQ / price / lead time], I can move quickly. Anything you need from my side to speed things up?
 
 Thanks,
-[Your name] — [Brand]`,
+[Your name], [Brand]`,
   },
   {
     id: "agreement",
     title: "Final Agreement",
     tag: "Ops",
-    subject: "Confirming our first order — [Brand]",
+    subject: "Confirming our first order, [Brand]",
     body: `Hi [Name],
 
 Great working this out. Confirming the details of our first order:
@@ -197,7 +197,7 @@ Great working this out. Confirming the details of our first order:
 Please send the proforma invoice and I'll arrange the deposit. Looking forward to a long partnership.
 
 Best,
-[Your name] — [Brand]`,
+[Your name], [Brand]`,
   },
 ];
 
@@ -451,7 +451,7 @@ export const resources: {
   url: string;
 }[] = [
   { name: "Alibaba", category: "Sourcing", description: "Global wholesale & manufacturing marketplace.", url: "https://www.alibaba.com" },
-  { name: "1688", category: "Sourcing", description: "China domestic wholesale — lower prices, more legwork.", url: "https://www.1688.com" },
+  { name: "1688", category: "Sourcing", description: "China domestic wholesale, lower prices, more legwork.", url: "https://www.1688.com" },
   { name: "CJ Dropshipping", category: "Fulfilment", description: "Sourcing, warehousing and fulfilment for dropshipping.", url: "https://cjdropshipping.com" },
   { name: "AutoDS", category: "Fulfilment", description: "Product research and dropshipping automation.", url: "https://www.autods.com" },
   { name: "Canva", category: "Design", description: "Fast, on-brand design for creative and social.", url: "https://www.canva.com" },

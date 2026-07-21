@@ -30,7 +30,7 @@ export function ShopifyChecklist() {
       <ToolHeader
         index="04 · Checklist"
         title="Shopify Launch Checklist"
-        description="Everything that has to be true before you flip your store live. Tick items off as you go — your progress saves automatically."
+        description="Everything that has to be true before you flip your store live. Tick items off as you go, your progress saves automatically."
         printable
         onReset={() => setChecked({})}
       />

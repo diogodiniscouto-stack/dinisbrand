@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     template: "%s · Founder Toolkit · Zero to Brand™",
   },
   description:
-    "The Founder Toolkit by Dinis — free editable frameworks, interactive tools and resources to start building your ecommerce brand.",
+    "The Founder Toolkit by Dinis, free editable frameworks, interactive tools and resources to start building your ecommerce brand.",
   robots: { index: false, follow: false },
 };
 

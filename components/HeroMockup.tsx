@@ -35,7 +35,7 @@ const inside = [
   "Built for founders",
 ];
 
-/** Interactive Founder Toolkit mockup — tilts toward the pointer, with a
+/** Interactive Founder Toolkit mockup, tilts toward the pointer, with a
  *  highlight that travels down the tool list and floating accent cards. */
 export function HeroMockup() {
   const mx = useMotionValue(0);
