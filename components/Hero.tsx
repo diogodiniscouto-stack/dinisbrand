@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Container } from "./ui/Container";
-import { Button } from "./ui/Button";
 import { HeroMockup } from "./HeroMockup";
+import { EmailCaptureForm } from "./EmailCaptureForm";
 import { ArrowRight, Sparkle } from "./Icons";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
@@ -57,28 +58,34 @@ export function Hero() {
                   />
                 </svg>
               </span>{" "}
-              Ecommerce Brand.
+              Brand.
             </motion.h1>
 
             <motion.p
               variants={fadeUp}
               className="mt-6 max-w-lg text-pretty text-lg leading-relaxed text-neutral-500"
             >
-              Practical frameworks, templates and systems to help ambitious
-              founders launch and grow real ecommerce brands.
+              The step-by-step system used to validate products, build brands
+              and launch profitable ecommerce businesses.
             </motion.p>
 
-            <motion.div
-              variants={fadeUp}
-              className="mt-8 flex flex-col gap-3 sm:flex-row"
-            >
-              <Button href="#starter-kit" size="lg" className="group">
-                Get the Free Starter Kit
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-              </Button>
-              <Button href="#zero-to-brand" variant="secondary" size="lg">
-                Explore Zero to Brand™
-              </Button>
+            {/* Inline email capture → free members area */}
+            <motion.div variants={fadeUp} className="mt-8 w-full max-w-md">
+              <EmailCaptureForm buttonLabel="Get the free starter kit" />
+              <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-neutral-400">
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                  No credit card required.
+                </span>
+                <span className="hidden text-neutral-300 sm:inline">·</span>
+                <Link
+                  href="#zero-to-brand"
+                  className="inline-flex items-center gap-1 font-medium text-neutral-500 transition-colors hover:text-neutral-900"
+                >
+                  Explore Zero to Brand™
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              </div>
             </motion.div>
 
             {/* Small trust line */}

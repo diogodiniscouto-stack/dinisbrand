@@ -135,3 +135,31 @@ export const Linkedin = (p: IconProps) => (
     <path d="M8 10v6M8 7.2v.01M12 16v-3.2a1.8 1.8 0 013.6 0V16M12 16v-6" />
   </svg>
 );
+
+export const Lock = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <rect x="4.5" y="10.5" width="15" height="10" rx="2.5" />
+    <path d="M8 10.5V7.5a4 4 0 018 0v3" />
+    <path d="M12 15v2" />
+  </svg>
+);
+
+export const Play = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <circle cx="12" cy="12" r="9" />
+    <path d="M10 8.5l6 3.5-6 3.5v-7z" fill="currentColor" stroke="none" />
+  </svg>
+);
+
+export const ArrowUpRight = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="M7 17L17 7M8 7h9v9" />
+  </svg>
+);
+
+export const FileText = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8l-5-5z" />
+    <path d="M14 3v5h5M9 13h6M9 17h6" />
+  </svg>
+);

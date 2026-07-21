@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Container } from "./ui/Container";
-import { Button } from "./ui/Button";
-import { Check, ArrowRight, Sparkle } from "./Icons";
+import { EmailCaptureForm } from "./EmailCaptureForm";
+import { Check, Sparkle } from "./Icons";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
 const items = [
@@ -56,17 +56,10 @@ export function StarterKit() {
                 revenue-ready brand. No fluff — just the frameworks that move the
                 needle.
               </motion.p>
-              <motion.div variants={fadeUp} className="mt-8">
-                <Button
-                  href="#newsletter"
-                  size="lg"
-                  className="group bg-white text-neutral-900 hover:bg-neutral-100"
-                >
-                  Get Free Access
-                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-                </Button>
+              <motion.div variants={fadeUp} className="mt-8 max-w-md">
+                <EmailCaptureForm theme="dark" buttonLabel="Get free access" />
                 <p className="mt-3 text-xs text-white/40">
-                  Instant delivery · No credit card required
+                  Instant access · No credit card required
                 </p>
               </motion.div>
             </motion.div>

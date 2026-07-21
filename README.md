@@ -55,7 +55,18 @@ lib/
 
 Navbar · Hero · Trusted System · Free Starter Kit · Zero to Brand™ · Mentorship · About · Newsletter · Footer
 
+## Funnel
+
+The site is built as a value ladder:
+
+1. **Landing (`/`)** — the hero captures an email in exchange for the free starter kit (`components/EmailCaptureForm.tsx`).
+2. **Free members area (`/welcome`)** — "Welcome to Zero to Brand™" with the 5 free modules (Lesson 1, Free Templates, Niche Validation, Brand Positioning, Shopify Checklist) and a persistent top banner: *"Want the complete roadmap? Unlock all 15 modules →"*.
+3. **Paid roadmap** — the `#unlock` section on `/welcome` shows all 15 modules (5 unlocked, 10 locked) with the upgrade CTA.
+4. **1:1 mentorship** — the natural next step, linked from both the landing page and the members area.
+
+Both starter-kit captures (hero + Free Starter Kit section) submit the email and redirect to `/welcome`.
+
 ## Notes
 
-- The newsletter and starter-kit forms are wired to a client-side placeholder. Connect them to your email provider (e.g. ConvertKit, Loops, Resend) when ready.
+- The email capture, newsletter and unlock CTAs are wired to client-side placeholders. Connect the capture to your email provider (e.g. ConvertKit, Loops, Resend) in `components/EmailCaptureForm.tsx`, and point the **"Unlock all 15 modules"** button (in `components/WelcomeContent.tsx`) at your real checkout URL.
 - The About portrait is a styled placeholder — drop in a real photo when available.

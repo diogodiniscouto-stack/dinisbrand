@@ -6,18 +6,18 @@ const columns = [
   {
     title: "Product",
     links: [
-      { label: "Resources", href: "#resources" },
-      { label: "Roadmaps", href: "#zero-to-brand" },
-      { label: "Newsletter", href: "#newsletter" },
-      { label: "Mentorship", href: "#mentorship" },
+      { label: "Resources", href: "/#resources" },
+      { label: "Roadmaps", href: "/#zero-to-brand" },
+      { label: "Newsletter", href: "/#newsletter" },
+      { label: "Mentorship", href: "/#mentorship" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", href: "#about" },
-      { label: "Starter Kit", href: "#starter-kit" },
-      { label: "Zero to Brand™", href: "#zero-to-brand" },
+      { label: "About", href: "/#about" },
+      { label: "Starter Kit", href: "/#starter-kit" },
+      { label: "Zero to Brand™", href: "/#zero-to-brand" },
     ],
   },
 ];
@@ -29,7 +29,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           {/* Brand */}
           <div className="max-w-xs">
-            <Link href="#top" className="flex items-center gap-2.5">
+            <Link href="/#top" className="flex items-center gap-2.5">
               <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-neutral-900 text-sm font-semibold text-white">
                 D
               </span>
@@ -90,7 +90,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#newsletter"
+                  href="/#newsletter"
                   className="text-sm text-neutral-600 transition-colors hover:text-neutral-900"
                 >
                   Newsletter
