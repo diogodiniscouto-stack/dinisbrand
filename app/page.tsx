@@ -10,8 +10,8 @@ export default function Home() {
       <main>
         <Hero />
         <InsideToolkit />
-        <ZeroToBrand />
         <Newsletter />
+        <ZeroToBrand />
       </main>
       <Footer />
     </>

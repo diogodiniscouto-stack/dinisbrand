@@ -47,14 +47,15 @@ export function Newsletter() {
               variants={fadeUp}
               className="mt-4 text-balance text-3xl font-semibold leading-[1.1] tracking-tighter text-neutral-900 sm:text-4xl md:text-[2.6rem]"
             >
-              Join thousands of founders building better brands.
+              Don&apos;t miss the next free playbook.
             </motion.h2>
             <motion.p
               variants={fadeUp}
               className="mt-5 max-w-md text-pretty text-base leading-relaxed text-neutral-500"
             >
-              One practical email a week, frameworks, breakdowns and the systems
-              behind real ecommerce brands. No hype.
+              You just saw the Starter Kit. Subscribe to get new frameworks,
+              breakdowns and the systems behind real ecommerce brands, one
+              practical email a week. Free, no hype.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mt-8 w-full max-w-md">
