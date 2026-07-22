@@ -29,7 +29,19 @@ export function MetaLogo() {
   return <Brand name="Meta" slug="meta" />;
 }
 export function KlaviyoLogo() {
-  return <Brand name="Klaviyo" slug="klaviyo" />;
+  return (
+    <span className="inline-flex items-center gap-2 text-[#9CA3AF] transition-all duration-300 hover:-translate-y-0.5 hover:text-black">
+      <svg
+        viewBox="0 0 24 24"
+        aria-label="Klaviyo"
+        className="h-[22px] w-[22px] shrink-0"
+        fill="currentColor"
+      >
+        <path d="M2 3h20l-6 9 6 9H2V3z" />
+      </svg>
+      <span className="text-[1.05rem] font-semibold tracking-tight">Klaviyo</span>
+    </span>
+  );
 }
 export function NotionLogo() {
   return <Brand name="Notion" slug="notion" />;
