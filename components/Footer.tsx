@@ -6,15 +6,6 @@ const LINKEDIN = "https://www.linkedin.com/in/diogo-dinis-a16bb1188/";
 
 const columns = [
   {
-    title: "Starter Kit",
-    links: [
-      { label: "Dashboard", href: "/toolkit" },
-      { label: "Ecommerce Reality Check", href: "/toolkit/reality-check" },
-      { label: "Beginner Roadmap", href: "/toolkit/roadmap" },
-      { label: "AI Prompt Library", href: "/toolkit/prompts" },
-    ],
-  },
-  {
     title: "Explore",
     links: [
       { label: "Free Starter Kit", href: "/#resources" },
@@ -41,7 +32,7 @@ export function Footer() {
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"
       />
       <Container className="py-16">
-        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 md:grid-cols-[1.6fr_1fr_1fr]">
           {/* Brand */}
           <div className="max-w-xs">
             <Link href="/#top" className="flex items-center gap-2.5">
