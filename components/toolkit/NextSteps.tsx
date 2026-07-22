@@ -1,11 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, ArrowRight, ArrowUpRight, Map, Calendar } from "@/components/Icons";
+import { Check, ArrowUpRight, Map, Calendar } from "@/components/Icons";
+import { CheckoutButton } from "./CheckoutButton";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
-// TODO: point at the real Stripe checkout URL once it exists.
-const CHECKOUT_URL = "/#newsletter";
 const MENTORSHIP_URL = "https://www.linkedin.com/in/diogo-dinis-a16bb1188/";
 
 const roadmapIncludes = [
@@ -86,13 +85,12 @@ export function NextSteps() {
               </li>
             ))}
           </ul>
-          <a
-            href={CHECKOUT_URL}
-            className="group mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-6 py-3.5 text-[0.98rem] font-semibold text-white shadow-soft transition-all duration-300 hover:bg-neutral-800 active:scale-[0.98]"
-          >
-            Get The Profitable Brand Roadmap
-            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-          </a>
+          <div className="mt-8">
+            <CheckoutButton />
+            <p className="mt-3 text-center text-xs text-neutral-400">
+              One-time payment · Lifetime access · Secure checkout by Stripe
+            </p>
+          </div>
         </motion.div>
 
         {/* Card 2 */}

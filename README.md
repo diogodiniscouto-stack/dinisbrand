@@ -112,6 +112,20 @@ lib/toolkit.ts                  All toolkit content (prompts, templates, …)
 - **Editable & saved:** scorecard, canvas, checklist and calculator all save automatically.
 - Reachable from the members area (`/welcome`) via the "Founder Toolkit" card; the accent blue `#3B5BFF` is `accent` in the Tailwind theme.
 
+## Stripe checkout
+
+The "Get The Profitable Brand Roadmap" button (`components/toolkit/NextSteps.tsx`) starts a Stripe Checkout Session via `app/api/checkout/route.ts` and redirects to Stripe's hosted page; `app/toolkit/purchase-success` confirms the payment.
+
+To enable it:
+
+1. In Stripe, create a **Product** and a one-time **Price** for the Roadmap.
+2. In Vercel → Project → Settings → **Environment Variables**, set:
+   - `STRIPE_SECRET_KEY` — your secret key (`sk_live_…` / `sk_test_…`)
+   - `STRIPE_PRICE_ID` — the Roadmap price id (`price_…`)
+3. Redeploy. Until both are set, the button shows a friendly "not configured yet" message instead of erroring.
+
+See `.env.example`. Use test keys + Stripe test cards (e.g. `4242 4242 4242 4242`) to try the full flow before going live.
+
 ## Notes
 
 - The email capture, newsletter and unlock CTAs are wired to client-side placeholders. Connect the capture to your email provider (e.g. ConvertKit, Loops, Resend) in `components/EmailCaptureForm.tsx`.
