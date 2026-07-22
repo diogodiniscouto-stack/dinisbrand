@@ -57,9 +57,11 @@ export function ZeroToBrand() {
             </motion.h2>
             <motion.p
               variants={fadeUp}
-              className="mt-4 max-w-lg text-pretty text-base leading-relaxed text-white/60 sm:text-lg"
+              className="mt-4 max-w-xl text-pretty text-base leading-relaxed text-white/60 sm:text-lg"
             >
-              The complete roadmap from idea to profitable ecommerce brand.
+              You&apos;ve seen the map. Now build the business. Most founders
+              spend months figuring out what to do next. This is the exact
+              system I use to build ecommerce brands from idea to launch.
             </motion.p>
 
             {/* Stats */}

@@ -63,6 +63,13 @@ export function Dashboard() {
           ))}
         </ul>
 
+        {/* Exclusivity */}
+        <p className="text-sm text-neutral-400">
+          <span className="font-medium text-neutral-500">Last updated July 2026.</span>{" "}
+          Every framework inside this kit is actively used with my mentorship
+          clients.
+        </p>
+
         <div className="flex flex-wrap items-center gap-3 pt-1">
           <Link
             href="/toolkit/reality-check"
