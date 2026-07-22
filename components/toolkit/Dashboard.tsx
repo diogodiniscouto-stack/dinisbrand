@@ -1,11 +1,82 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { toolkitNav } from "./ToolkitSidebar";
 import { useToolkitProgress } from "@/lib/toolkitProgress";
+import { useToolkitName } from "@/lib/toolkitProfile";
 import { Check, ArrowRight, ArrowUpRight } from "@/components/Icons";
 import { fadeUp, staggerContainer } from "@/lib/motion";
+
+function WelcomeBack() {
+  const [name, setName, nameHydrated] = useToolkitName();
+  const { started, hydrated } = useToolkitProgress();
+  const [editing, setEditing] = useState(false);
+  const [draft, setDraft] = useState("");
+
+  if (!nameHydrated || !hydrated || !started) return null;
+
+  function save(e: React.FormEvent) {
+    e.preventDefault();
+    const v = draft.trim();
+    if (v) setName(v);
+    setEditing(false);
+  }
+
+  return (
+    <div className="inline-flex flex-wrap items-center gap-2 rounded-full border border-neutral-200/70 bg-white px-4 py-2 text-sm shadow-soft">
+      <span aria-hidden>👋</span>
+      {name && !editing ? (
+        <>
+          <span className="font-medium text-neutral-800">
+            Welcome back, {name}.
+          </span>
+          <button
+            type="button"
+            onClick={() => {
+              setDraft(name);
+              setEditing(true);
+            }}
+            className="text-xs text-neutral-400 underline-offset-2 hover:text-neutral-700 hover:underline"
+          >
+            edit
+          </button>
+        </>
+      ) : editing ? (
+        <form onSubmit={save} className="flex items-center gap-2">
+          <input
+            autoFocus
+            value={draft}
+            onChange={(e) => setDraft(e.target.value)}
+            placeholder="Your name"
+            className="h-7 w-28 rounded-full border border-neutral-200 bg-neutral-50 px-3 text-sm outline-none focus:border-accent/40"
+          />
+          <button
+            type="submit"
+            className="rounded-full bg-neutral-900 px-3 py-1 text-xs font-medium text-white"
+          >
+            Save
+          </button>
+        </form>
+      ) : (
+        <>
+          <span className="font-medium text-neutral-800">Welcome back.</span>
+          <button
+            type="button"
+            onClick={() => {
+              setDraft("");
+              setEditing(true);
+            }}
+            className="text-xs font-medium text-accent hover:underline"
+          >
+            Add your name
+          </button>
+        </>
+      )}
+    </div>
+  );
+}
 
 const descriptions: Record<string, string> = {
   "Is Ecommerce Right for You?": "Answer the honest questions before you invest a euro.",
@@ -39,7 +110,8 @@ export function Dashboard() {
       className="flex flex-col gap-12"
     >
       {/* Hero */}
-      <motion.div variants={fadeUp} className="flex flex-col gap-5">
+      <motion.div variants={fadeUp} className="flex flex-col items-start gap-5">
+        <WelcomeBack />
         <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-accent/20 bg-accent/[0.06] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
           Free Starter Kit
         </span>

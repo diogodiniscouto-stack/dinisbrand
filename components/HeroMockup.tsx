@@ -211,20 +211,6 @@ export function HeroMockup() {
             </span>
           </div>
         </motion.div>
-
-        <motion.div
-          style={{ transform: "translateZ(80px)", animationDelay: "1.4s" }}
-          className="absolute -left-5 bottom-14 hidden animate-float rounded-2xl border border-neutral-200/70 bg-white/90 px-3 py-2 shadow-card backdrop-blur md:block"
-        >
-          <div className="flex items-center gap-2">
-            <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-accent/10 text-accent">
-              <Calculator className="h-3.5 w-3.5" />
-            </span>
-            <span className="text-[0.72rem] font-semibold text-neutral-800">
-              62% margin
-            </span>
-          </div>
-        </motion.div>
       </motion.div>
     </div>
   );

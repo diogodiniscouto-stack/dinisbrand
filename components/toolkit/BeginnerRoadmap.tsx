@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ToolHeader } from "./ToolHeader";
-import { ToolkitPageNav } from "./ToolkitPageNav";
+import { LessonEnd } from "./LessonEnd";
 import { roadmapSteps } from "@/lib/toolkit";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
@@ -51,7 +51,10 @@ export function BeginnerRoadmap() {
         ))}
       </motion.ol>
 
-      <ToolkitPageNav />
+      <LessonEnd
+        takeaway="see the full path from idea to your first sale"
+        action={["I can name the 8 steps and their order"]}
+      />
     </div>
   );
 }

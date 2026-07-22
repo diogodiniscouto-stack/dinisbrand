@@ -117,7 +117,7 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
       {/* Unlock CTA */}
       <div className="p-3">
         <Link
-          href="/#zero-to-brand"
+          href="/toolkit/next-steps"
           onClick={onNavigate}
           className="group block overflow-hidden rounded-2xl border border-neutral-200/70 bg-neutral-950 p-4 shadow-soft transition-transform duration-300 hover:-translate-y-0.5"
         >

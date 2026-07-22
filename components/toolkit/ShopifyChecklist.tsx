@@ -1,7 +1,7 @@
 "use client";
 
 import { ToolHeader } from "./ToolHeader";
-import { ToolkitPageNav } from "./ToolkitPageNav";
+import { LessonEnd } from "./LessonEnd";
 import { shopifySections } from "@/lib/toolkit";
 import { useLocalState } from "@/lib/useLocalState";
 import { Check } from "@/components/Icons";
@@ -121,7 +121,7 @@ export function ShopifyChecklist() {
         })}
       </div>
 
-      <ToolkitPageNav />
+      <LessonEnd takeaway="set up a store that's ready to launch" />
     </div>
   );
 }

@@ -1,7 +1,8 @@
 "use client";
 
 import { ToolHeader } from "./ToolHeader";
-import { ToolkitPageNav } from "./ToolkitPageNav";
+import { LessonEnd } from "./LessonEnd";
+import { DinisNote } from "./DinisNote";
 import { validationBlocks } from "@/lib/toolkit";
 import { useLocalState } from "@/lib/useLocalState";
 import { cn } from "@/lib/utils";
@@ -138,7 +139,20 @@ export function ValidationFramework() {
         </div>
       </div>
 
-      <ToolkitPageNav />
+      <div className="mt-4">
+        <DinisNote variant="tip">
+          I wasted three months looking for the perfect product. I should have
+          validated demand first. Score before you source.
+        </DinisNote>
+      </div>
+
+      <LessonEnd
+        takeaway="score whether an idea is worth building before spending money"
+        action={[
+          "I've scored at least one product idea above",
+          "My idea scores 27 out of 40 or higher",
+        ]}
+      />
     </div>
   );
 }

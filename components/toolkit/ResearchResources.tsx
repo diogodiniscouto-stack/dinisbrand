@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ToolHeader } from "./ToolHeader";
-import { ToolkitPageNav } from "./ToolkitPageNav";
+import { LessonEnd } from "./LessonEnd";
 import { researchGroups } from "@/lib/toolkit";
 import { ArrowUpRight } from "@/components/Icons";
 import { fadeUp, staggerContainer } from "@/lib/motion";
@@ -66,7 +66,10 @@ export function ResearchResources() {
         ))}
       </div>
 
-      <ToolkitPageNav />
+      <LessonEnd
+        takeaway="find products, suppliers and competitors with the right tools"
+        action={["I've bookmarked the tools I'll actually use"]}
+      />
     </div>
   );
 }

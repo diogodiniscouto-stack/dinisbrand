@@ -186,7 +186,7 @@ export function LessonView({ slug }: { slug: string }) {
           </Link>
         ) : (
           <Link
-            href="/#zero-to-brand"
+            href="/toolkit/next-steps"
             onClick={() => markComplete(lesson.slug)}
             className="group flex flex-1 items-center justify-end gap-3 rounded-2xl border border-primary bg-primary px-5 py-4 text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-600"
           >

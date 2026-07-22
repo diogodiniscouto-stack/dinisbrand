@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { ToolHeader } from "./ToolHeader";
-import { ToolkitPageNav } from "./ToolkitPageNav";
+import { LessonEnd } from "./LessonEnd";
 import { CopyButton } from "./CopyButton";
 import { prompts, promptCategories } from "@/lib/toolkit";
 import { Search } from "@/components/Icons";
@@ -96,7 +96,10 @@ export function PromptLibrary() {
         {filtered.length} prompt{filtered.length === 1 ? "" : "s"}
       </p>
 
-      <ToolkitPageNav />
+      <LessonEnd
+        takeaway="use AI to research, write and plan far faster"
+        action={["I've copied the prompts I'll use first"]}
+      />
     </div>
   );
 }

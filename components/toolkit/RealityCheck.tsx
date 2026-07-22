@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ToolHeader } from "./ToolHeader";
-import { ToolkitPageNav } from "./ToolkitPageNav";
+import { LessonEnd } from "./LessonEnd";
+import { DinisNote } from "./DinisNote";
 import { realityCheck } from "@/lib/toolkit";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
@@ -42,9 +43,23 @@ export function RealityCheck() {
             </div>
           </motion.article>
         ))}
+
+        <motion.div variants={fadeUp}>
+          <DinisNote variant="today">
+            I&apos;d rather launch in 30 days than spend six months planning.
+            Motion beats perfection, especially at the start.
+          </DinisNote>
+        </motion.div>
       </motion.div>
 
-      <ToolkitPageNav />
+      <LessonEnd
+        takeaway="decide whether ecommerce is the right path for you"
+        action={[
+          "I know roughly how much I can invest",
+          "I know how many hours a week I can commit",
+          "I'm prepared to give this 6 to 12 months",
+        ]}
+      />
     </div>
   );
 }

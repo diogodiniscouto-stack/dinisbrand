@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ToolHeader } from "./ToolHeader";
-import { ToolkitPageNav } from "./ToolkitPageNav";
+import { LessonEnd } from "./LessonEnd";
+import { DinisNote } from "./DinisNote";
 import { mistakes } from "@/lib/toolkit";
 import { AlertTriangle, Check, ArrowRight, ArrowUpRight } from "@/components/Icons";
 import { cn } from "@/lib/utils";
@@ -28,6 +29,13 @@ export function BeginnerMistakes() {
         title="12 Mistakes I Wish Someone Had Told Me"
         description="The costly errors I learned the hard way. Finish here, and you'll avoid what kills most brands. Tap a card to expand."
       />
+
+      <div className="mb-5">
+        <DinisNote variant="mistake">
+          Beginners spend more time choosing a logo than choosing a market. Pick
+          the market first, everything else is downstream of that.
+        </DinisNote>
+      </div>
 
       <div className="flex flex-col gap-2.5">
         {mistakes.map((m, i) => {
@@ -148,7 +156,7 @@ export function BeginnerMistakes() {
         </div>
       </div>
 
-      <ToolkitPageNav />
+      <LessonEnd takeaway="avoid the 12 mistakes that kill most brands" />
     </div>
   );
 }

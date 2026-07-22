@@ -37,7 +37,13 @@ export function ContextCTA({ variant }: { variant: "roadmap" | "mentorship" }) {
           </div>
         </div>
         <Link
-          href={isRoadmap ? "/#zero-to-brand" : "/#mentorship"}
+          href={
+            isRoadmap
+              ? "/toolkit/next-steps"
+              : "https://www.linkedin.com/in/diogo-dinis-a16bb1188/"
+          }
+          target={isRoadmap ? undefined : "_blank"}
+          rel={isRoadmap ? undefined : "noreferrer"}
           className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-neutral-900 shadow-soft transition-all duration-300 hover:bg-neutral-100 active:scale-[0.98]"
         >
           {isRoadmap ? "Explore the roadmap" : "Apply for mentorship"}

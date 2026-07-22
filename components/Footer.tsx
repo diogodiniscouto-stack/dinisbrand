@@ -9,7 +9,7 @@ const columns = [
     title: "Explore",
     links: [
       { label: "Free Starter Kit", href: "/#resources" },
-      { label: "The Profitable Brand Roadmap", href: "/#zero-to-brand" },
+      { label: "The Profitable Brand Roadmap", href: "/toolkit/next-steps" },
       { label: "Newsletter", href: "/#newsletter" },
     ],
   },

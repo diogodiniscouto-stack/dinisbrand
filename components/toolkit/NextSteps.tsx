@@ -5,7 +5,7 @@ import { Check, ArrowRight, ArrowUpRight, Map, Calendar } from "@/components/Ico
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
 // TODO: point at the real Stripe checkout URL once it exists.
-const CHECKOUT_URL = "/#zero-to-brand";
+const CHECKOUT_URL = "/#newsletter";
 const MENTORSHIP_URL = "https://www.linkedin.com/in/diogo-dinis-a16bb1188/";
 
 const roadmapIncludes = [
