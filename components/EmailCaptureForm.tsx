@@ -52,7 +52,7 @@ export function EmailCaptureForm({
       <form
         onSubmit={handleSubmit}
         className={cn(
-          "flex flex-col gap-2 rounded-[1.4rem] bg-white p-2 sm:flex-row sm:items-center sm:rounded-full",
+          "flex flex-col gap-2 rounded-[1.6rem] bg-white p-2 sm:flex-row sm:items-center sm:rounded-full",
           className,
         )}
       >
@@ -63,9 +63,9 @@ export function EmailCaptureForm({
           placeholder="First name"
           aria-label="First name"
           autoComplete="given-name"
-          className="h-14 rounded-full bg-transparent px-5 text-[1.02rem] text-neutral-900 outline-none placeholder:text-neutral-400 sm:w-36 sm:px-6"
+          className="h-14 w-full rounded-full bg-transparent px-5 text-[1.02rem] text-neutral-900 outline-none placeholder:text-neutral-400 sm:w-40 sm:shrink-0 sm:px-6"
         />
-        <span aria-hidden className="mx-1 hidden h-7 w-px bg-neutral-200 sm:block" />
+        <span aria-hidden className="hidden h-7 w-px shrink-0 bg-neutral-200 sm:block" />
         <input
           type="email"
           required
@@ -74,12 +74,12 @@ export function EmailCaptureForm({
           placeholder={placeholder}
           aria-label="Email address"
           autoComplete="email"
-          className="h-14 flex-1 rounded-full bg-transparent px-5 text-[1.02rem] text-neutral-900 outline-none placeholder:text-neutral-400 sm:px-6"
+          className="h-14 w-full rounded-full bg-transparent px-5 text-[1.02rem] text-neutral-900 outline-none placeholder:text-neutral-400 sm:min-w-0 sm:flex-1 sm:px-6"
         />
         <button
           type="submit"
           disabled={loading}
-          className="group/btn relative inline-flex h-14 shrink-0 items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-accent to-[#5B7BFF] px-7 text-[1.02rem] font-semibold text-white shadow-[0_12px_34px_-10px_rgba(59,91,255,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_-10px_rgba(59,91,255,0.85)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 active:translate-y-0 active:scale-[0.99] disabled:opacity-70"
+          className="group/btn relative inline-flex h-14 w-full shrink-0 items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-accent to-[#5B7BFF] px-7 text-[1.02rem] font-semibold text-white shadow-[0_12px_34px_-10px_rgba(59,91,255,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_-10px_rgba(59,91,255,0.85)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 active:translate-y-0 active:scale-[0.99] disabled:opacity-70 sm:w-auto"
         >
           {/* Shine sweep on hover */}
           <span
