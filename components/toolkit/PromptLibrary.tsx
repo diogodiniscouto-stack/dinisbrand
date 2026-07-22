@@ -7,9 +7,9 @@ import { prompts, promptCategories } from "@/lib/toolkit";
 import { Search } from "@/components/Icons";
 import { cn } from "@/lib/utils";
 
-export function AIPrompts() {
+export function PromptLibrary() {
   const [query, setQuery] = useState("");
-  const [active, setActive] = useState<string>("All");
+  const [active, setActive] = useState("All");
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -30,11 +30,10 @@ export function AIPrompts() {
     <div>
       <ToolHeader
         index="05 · Library"
-        title="AI Prompt Library"
-        description="A searchable library of battle-tested prompts for every part of your brand. Search, filter by category, and copy in one click."
+        title="100 AI Prompts I Actually Use"
+        description="The prompts I reach for daily, for research, branding, copy, ads and content. Search, filter, and copy in one click."
       />
 
-      {/* Search */}
       <div className="relative mb-4">
         <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-400" />
         <input
@@ -46,7 +45,6 @@ export function AIPrompts() {
         />
       </div>
 
-      {/* Category chips */}
       <div className="mb-8 flex flex-wrap gap-2">
         {categories.map((cat) => (
           <button
@@ -65,12 +63,9 @@ export function AIPrompts() {
         ))}
       </div>
 
-      {/* Results */}
       {filtered.length === 0 ? (
         <div className="rounded-3xl border border-dashed border-neutral-200 bg-neutral-50/50 py-16 text-center">
-          <p className="text-sm text-neutral-400">
-            No prompts match “{query}”.
-          </p>
+          <p className="text-sm text-neutral-400">No prompts match “{query}”.</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">

@@ -59,7 +59,7 @@ export function ZeroToBrand() {
               variants={fadeUp}
               className="mt-6 text-balance text-3xl font-semibold leading-[1.08] tracking-tighter text-white sm:text-4xl md:text-[2.85rem]"
             >
-              Zero to Brand™
+              The Profitable Brand Roadmap
             </motion.h2>
             <motion.p
               variants={fadeUp}

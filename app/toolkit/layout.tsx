@@ -3,11 +3,11 @@ import { ToolkitShell } from "@/components/toolkit/ToolkitShell";
 
 export const metadata: Metadata = {
   title: {
-    default: "Founder Toolkit",
-    template: "%s · Founder Toolkit · Zero to Brand™",
+    default: "Profitable Brand Starter Kit",
+    template: "%s · Profitable Brand Starter Kit",
   },
   description:
-    "The Founder Toolkit by Dinis, free editable frameworks, interactive tools and resources to start building your ecommerce brand.",
+    "The Profitable Brand Starter Kit by Dinis, a free premium onboarding for future founders: reality check, roadmap, validation, research resources, AI prompts and a Shopify launch checklist.",
   robots: { index: false, follow: false },
 };
 

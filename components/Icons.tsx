@@ -136,6 +136,21 @@ export const Linkedin = (p: IconProps) => (
   </svg>
 );
 
+export const AlertTriangle = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="M12 3.5L21 19H3l9-15.5z" />
+    <path d="M12 10v4M12 17v.01" />
+  </svg>
+);
+
+export const Rocket = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <path d="M5 15c-1.5 1-2 4-2 4s3-.5 4-2c.7-.9.7-2 0-2.7a2 2 0 00-2 .7z" />
+    <path d="M9 13c3-6 6-8 11-8 0 5-2 8-8 11l-3-3z" />
+    <path d="M9 13l-3-1 1-3M11 15l1 3 3-1" />
+  </svg>
+);
+
 export const Gift = (p: IconProps) => (
   <svg {...base} {...p}>
     <rect x="3.5" y="8.5" width="17" height="4" rx="1.5" />

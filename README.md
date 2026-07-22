@@ -53,7 +53,7 @@ lib/
 
 ## Landing page
 
-Conversion-focused and distraction-free: **Navbar** (Resources · Newsletter · *Get Free Founder Toolkit*) → **Hero** (large email capture for the Free Founder Toolkit, toolkit dashboard mockup, handwritten annotations) → **Inside the Founder Toolkit** (7 tool cards) → **Zero to Brand™** teaser (15 modules · 72 frameworks · 40+ templates) → **Newsletter** → **Footer**. The hero email capture redirects to `/toolkit`.
+Conversion-focused and distraction-free: **Navbar** (Resources · Newsletter · *Get Free Founder Toolkit*) → **Hero** (large email capture for the Free Founder Toolkit, toolkit dashboard mockup, handwritten annotations) → **Inside the Founder Toolkit** (7 tool cards) → **The Profitable Brand Roadmap** teaser (15 modules · 72 frameworks · 40+ templates) → **Newsletter** → **Footer**. The hero email capture redirects to `/toolkit`.
 
 ## Funnel
 
@@ -61,7 +61,7 @@ The site is built as a value ladder:
 
 1. **Landing (`/`)** — the hero captures an email in exchange for the free Starter Kit (`components/EmailCaptureForm.tsx`).
 2. **Private Starter Kit dashboard (`/welcome`)** — a Notion/Linear/Stripe-inspired members area (see below).
-3. **Paid roadmap** — Zero to Brand™, promoted through contextual CTAs throughout the dashboard.
+3. **Paid roadmap** — The Profitable Brand Roadmap, promoted through contextual CTAs throughout the dashboard.
 4. **1:1 mentorship** — promoted alongside the roadmap.
 
 Both starter-kit captures (hero + Free Starter Kit section) submit the email and redirect to `/welcome`.
@@ -83,7 +83,7 @@ components/starter-kit/
   LessonView.tsx      Reading time · outcomes · download · mark-complete · next
   LessonBlocks.tsx    Structured content renderer
   DownloadTemplateButton.tsx  In-browser template download (Blob)
-  ContextCTA.tsx      Alternating Zero to Brand™ / mentorship upsell
+  ContextCTA.tsx      Alternating The Profitable Brand Roadmap / mentorship upsell
 lib/starterKit.ts     Single source of truth: lessons, content, templates
 ```
 
@@ -117,5 +117,5 @@ lib/toolkit.ts                  All toolkit content (prompts, templates, …)
 - The email capture, newsletter and unlock CTAs are wired to client-side placeholders. Connect the capture to your email provider (e.g. ConvertKit, Loops, Resend) in `components/EmailCaptureForm.tsx`.
 - Toolkit content (prompts, templates, resources, checklist, canvas fields) lives in `lib/toolkit.ts`.
 - Lesson content and templates live in `lib/starterKit.ts` — edit there to update any lesson.
-- Zero to Brand™ CTAs point at `/#zero-to-brand` for now; repoint them once the sales page and Stripe checkout exist.
+- The Profitable Brand Roadmap CTAs point at `/#zero-to-brand` for now; repoint them once the sales page and Stripe checkout exist.
 - The About portrait is a styled placeholder — drop in a real photo when available.

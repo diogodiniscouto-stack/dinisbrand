@@ -16,7 +16,7 @@ const columns = [
     title: "Explore",
     links: [
       { label: "Resources", href: "/#resources" },
-      { label: "Zero to Brand™", href: "/#zero-to-brand" },
+      { label: "The Profitable Brand Roadmap", href: "/#zero-to-brand" },
       { label: "Newsletter", href: "/#newsletter" },
     ],
   },

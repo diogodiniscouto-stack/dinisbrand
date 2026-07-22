@@ -22,7 +22,7 @@ export function ContextCTA({ variant }: { variant: "roadmap" | "mentorship" }) {
           </span>
           <div>
             <span className="text-xs font-semibold uppercase tracking-[0.16em] text-primary-300">
-              {isRoadmap ? "Zero to Brand™" : "1:1 Mentorship"}
+              {isRoadmap ? "The Profitable Brand Roadmap" : "1:1 Mentorship"}
             </span>
             <h3 className="mt-1.5 text-lg font-semibold tracking-tight text-white">
               {isRoadmap
@@ -31,7 +31,7 @@ export function ContextCTA({ variant }: { variant: "roadmap" | "mentorship" }) {
             </h3>
             <p className="mt-1 max-w-md text-sm leading-relaxed text-white/60">
               {isRoadmap
-                ? "This kit is the foundation. Zero to Brand™ is all 15 modules, from suppliers and content to retention, finance and running your brand like a company."
+                ? "This kit is the foundation. The Profitable Brand Roadmap is all 15 modules, from suppliers and content to retention, finance and running your brand like a company."
                 : "1:1 mentorship includes the full roadmap, weekly calls and line-by-line reviews of your store as you build."}
             </p>
           </div>

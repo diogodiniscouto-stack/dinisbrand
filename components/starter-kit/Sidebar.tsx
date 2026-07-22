@@ -122,7 +122,7 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
           className="group block overflow-hidden rounded-2xl border border-neutral-200/70 bg-neutral-950 p-4 shadow-soft transition-transform duration-300 hover:-translate-y-0.5"
         >
           <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-primary-300">
-            Zero to Brand™
+            The Profitable Brand Roadmap
           </p>
           <p className="mt-1 text-sm font-medium leading-snug text-white">
             Unlock all 15 modules

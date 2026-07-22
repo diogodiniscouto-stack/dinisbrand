@@ -1,14 +1,14 @@
 "use client";
 
 import { ToolHeader } from "./ToolHeader";
-import { checklistSections } from "@/lib/toolkit";
+import { shopifySections } from "@/lib/toolkit";
 import { useLocalState } from "@/lib/useLocalState";
 import { Check } from "@/components/Icons";
 import { cn } from "@/lib/utils";
 
 type Checked = Record<string, boolean>;
 
-const allKeys = checklistSections.flatMap((s, si) =>
+const allKeys = shopifySections.flatMap((s, si) =>
   s.items.map((_, ii) => `${si}:${ii}`),
 );
 
@@ -28,9 +28,9 @@ export function ShopifyChecklist() {
   return (
     <div className="print-full">
       <ToolHeader
-        index="04 · Checklist"
+        index="06 · Checklist"
         title="Shopify Launch Checklist"
-        description="Everything that has to be true before you flip your store live. Tick items off as you go, your progress saves automatically."
+        description="Set your store up like a pro before you spend a cent on ads. Tick items off as you go, your progress saves automatically."
         printable
         onReset={() => setChecked({})}
       />
@@ -55,7 +55,7 @@ export function ShopifyChecklist() {
 
       {/* Sections */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {checklistSections.map((section, si) => {
+        {shopifySections.map((section, si) => {
           const sectionKeys = section.items.map((_, ii) => `${si}:${ii}`);
           const sectionDone = sectionKeys.filter((k) => checked[k]).length;
           const complete = sectionDone === section.items.length;
@@ -64,13 +64,13 @@ export function ShopifyChecklist() {
               key={section.title}
               className="print-break flex flex-col rounded-3xl border border-neutral-200/70 bg-white p-5 shadow-soft"
             >
-              <div className="mb-3 flex items-center justify-between">
+              <div className="mb-3 flex items-center justify-between gap-2">
                 <h3 className="text-[1.02rem] font-semibold tracking-tight text-neutral-900">
                   {section.title}
                 </h3>
                 <span
                   className={cn(
-                    "rounded-full px-2.5 py-0.5 text-[0.68rem] font-semibold",
+                    "shrink-0 rounded-full px-2.5 py-0.5 text-[0.68rem] font-semibold",
                     complete
                       ? "bg-emerald-50 text-emerald-600"
                       : "bg-neutral-100 text-neutral-500",

@@ -5,66 +5,66 @@ import { motion } from "framer-motion";
 import { Container } from "./ui/Container";
 import { SectionHeading } from "./ui/SectionHeading";
 import {
+  ShieldCheck,
+  Map,
   Target,
-  Compass,
-  Bolt,
-  Box,
-  Store,
-  Calculator,
   Folder,
+  Bolt,
+  Store,
+  AlertTriangle,
   ArrowRight,
 } from "./Icons";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
 const items = [
   {
+    icon: ShieldCheck,
+    title: "The Ecommerce Reality Check",
+    desc: "An honest look at money, time and effort before you start.",
+    href: "/toolkit/reality-check",
+    tag: "Read",
+  },
+  {
+    icon: Map,
+    title: "The Beginner Roadmap",
+    desc: "The exact 8-step sequence from idea to your first sales.",
+    href: "/toolkit/roadmap",
+    tag: "Roadmap",
+  },
+  {
     icon: Target,
-    title: "Product Validation Scorecard",
-    desc: "Score any idea across six make-or-break factors and get a clear verdict.",
-    href: "/toolkit/product-validation",
+    title: "Product Validation Framework",
+    desc: "Score any product idea before you spend a cent.",
+    href: "/toolkit/validation",
     tag: "Framework",
   },
   {
-    icon: Compass,
-    title: "Brand Positioning Canvas",
-    desc: "Define your entire positioning on one editable, printable page.",
-    href: "/toolkit/brand-canvas",
-    tag: "Framework",
+    icon: Folder,
+    title: "Product Research Resources",
+    desc: "The tools I use to find products, suppliers and competitors.",
+    href: "/toolkit/research-resources",
+    tag: "Resources",
   },
   {
     icon: Bolt,
     title: "AI Prompt Library",
-    desc: "A searchable library of proven prompts for every part of your brand.",
-    href: "/toolkit/ai-prompts",
+    desc: "The prompts I reach for daily, searchable and copy-ready.",
+    href: "/toolkit/prompts",
     tag: "Library",
-  },
-  {
-    icon: Box,
-    title: "Supplier Outreach Templates",
-    desc: "Seven copy-paste emails that get suppliers to take you seriously.",
-    href: "/toolkit/supplier-templates",
-    tag: "Templates",
   },
   {
     icon: Store,
     title: "Shopify Launch Checklist",
-    desc: "Every box to tick before you launch, with a live progress bar.",
+    desc: "Set your store up like a pro before you run ads.",
     href: "/toolkit/shopify-checklist",
     tag: "Checklist",
   },
   {
-    icon: Calculator,
-    title: "Profit Calculator",
-    desc: "Know your margins and break-even ROAS before you spend on ads.",
-    href: "/toolkit/profit-calculator",
-    tag: "Calculator",
-  },
-  {
-    icon: Folder,
-    title: "Resource Directory",
-    desc: "The tools every ecommerce founder should have bookmarked.",
-    href: "/toolkit/resources",
-    tag: "Directory",
+    icon: AlertTriangle,
+    title: "12 Beginner Mistakes",
+    desc: "The errors that kill most brands, and how to avoid them.",
+    href: "/toolkit/mistakes",
+    tag: "Read",
   },
 ];
 
@@ -73,9 +73,9 @@ export function InsideToolkit() {
     <section id="resources" className="relative py-24 sm:py-32">
       <Container>
         <SectionHeading
-          eyebrow="Free Founder Toolkit"
-          title="Inside the Founder Toolkit"
-          description="Seven practical, interactive tools to take you from a raw idea to a launch-ready brand, free, forever."
+          eyebrow="Profitable Brand Starter Kit"
+          title="Inside the free Starter Kit"
+          description={"A premium onboarding for future founders, seven parts that take you from “no idea where to start” to knowing your exact next steps."}
         />
 
         <motion.div
@@ -106,7 +106,7 @@ export function InsideToolkit() {
                   {item.desc}
                 </p>
                 <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-neutral-500 transition-colors group-hover:text-accent">
-                  Open tool
+                  Open
                   <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                 </span>
               </Link>
@@ -114,7 +114,6 @@ export function InsideToolkit() {
           ))}
         </motion.div>
 
-        {/* Primary CTA back to capture */}
         <motion.div
           variants={fadeUp}
           initial="hidden"

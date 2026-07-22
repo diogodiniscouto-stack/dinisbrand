@@ -1,296 +1,145 @@
-// Founder Toolkit, data source of truth (content, no UI).
+// Profitable Brand Starter Kit content source of truth (no UI).
 
-/* 01 · Product Validation Scorecard */
-export const validationRows: {
-  category: string;
-  evaluate: string;
-}[] = [
+/* PAGE 1 · The Ecommerce Reality Check */
+export const realityCheck: { q: string; a: string }[] = [
   {
-    category: "Market Size",
-    evaluate: "Is the audience big enough to build a real brand, but not impossibly broad?",
+    q: "How much money do I really need?",
+    a: "Less than the gurus imply, more than €0. A lean, validated launch is realistic on €1,000–€3,000: a small first inventory or samples, a Shopify plan, a domain, and a modest ad-testing budget. Dropshipping lowers upfront inventory cost but not the cost of learning. Whatever the number, keep enough runway to make mistakes, because you will.",
   },
   {
-    category: "Competition",
-    evaluate: "Is there proven demand without being a saturated race to the bottom?",
+    q: "How long does it take?",
+    a: "Plan in months, not weeks. Picking a niche, validating demand, sourcing, and building a store is a 4–8 week job done properly. First sales can come fast, but a brand that pays you consistently usually takes 6–12 months of iteration. Speed comes from following a sequence instead of guessing.",
   },
   {
-    category: "Margins",
-    evaluate: "Can you sell at 3–5x landed cost with room for ads and returns?",
+    q: "Is ecommerce still worth it in 2026?",
+    a: "Yes, but the easy money is gone. Random dropshipping stores with a winning product and cheap ads mostly don't work anymore. What works is a real brand: a specific customer, a clear position, good content, and retention. Harder to start, far more durable once it clicks.",
   },
   {
-    category: "Content Potential",
-    evaluate: "Is the product visual, demonstrable and easy to create content around?",
+    q: "Dropshipping vs holding inventory?",
+    a: "Dropshipping is a great way to validate demand with low risk and slow shipping. Holding inventory gives you better margins, faster delivery, custom packaging, and a real brand, at the cost of upfront capital. Most successful founders start by validating (often dropshipping or small test batches) and move to inventory once a product proves itself.",
   },
   {
-    category: "Price Point",
-    evaluate: "Is the price high enough to be profitable, low enough to be an easy yes?",
+    q: "What do beginners usually earn?",
+    a: "Honestly? Most earn nothing on their first store, and that's normal. The first store is tuition. The founders who win treat early losses as data, keep costs low, and reinvest. The ones who make it to consistent profit are usually on their second or third serious attempt, applying what the first one taught them.",
   },
   {
-    category: "Passion & Interest",
-    evaluate: "Will you still care about this niche in 12 months?",
+    q: "What mistakes destroy most brands?",
+    a: "Building before validating, competing only on price, spending on ads too early, and quitting right before it works. Almost every failure traces back to skipping demand validation or running out of patience and cash at the same time. Avoid those and you're already ahead of most.",
   },
 ];
 
-export const validationBands = [
-  { min: 0, max: 23, label: "Poor", tone: "red" as const, note: "Reconsider, the fundamentals aren't there yet." },
-  { min: 24, max: 35, label: "Average", tone: "amber" as const, note: "Workable, but sharpen the weak categories first." },
-  { min: 36, max: 49, label: "Good", tone: "blue" as const, note: "Strong candidate. Move to product research." },
-  { min: 50, max: 60, label: "Excellent", tone: "green" as const, note: "Rare opportunity. Build with conviction." },
+/* PAGE 2 · The Beginner Roadmap */
+export const roadmapSteps: { title: string; text: string }[] = [
+  {
+    title: "Choose your niche",
+    text: "Pick a specific audience with a real problem and money to spend. Narrow beats broad. You're looking for a group you understand and can create content for.",
+  },
+  {
+    title: "Validate demand",
+    text: "Prove people already want this before you build. Search volume, active communities, and profitable competitors are green lights. No demand, no business.",
+  },
+  {
+    title: "Find suppliers",
+    text: "Source samples from Alibaba, 1688 or local suppliers. Vet quality, MOQ, lead times and reliability before committing to a first order.",
+  },
+  {
+    title: "Build your brand",
+    text: "Define your positioning, name, voice and visual identity. This is the difference between a store and a brand people remember and return to.",
+  },
+  {
+    title: "Create your Shopify store",
+    text: "Launch a fast, trustworthy, mobile-first store with strong product pages, clear policies and email capture. Presentation is perceived quality.",
+  },
+  {
+    title: "Launch",
+    text: "Go live to a warm audience first, friends, community, email list, organic content. A soft launch surfaces problems before you spend on ads.",
+  },
+  {
+    title: "Get your first sales",
+    text: "Drive early traffic through content and small, tightly-targeted ad tests. Your first goal is data and proof, not scale.",
+  },
+  {
+    title: "Scale",
+    text: "Once the unit economics work, pour fuel on what's proven: scale winning ads, expand your catalogue and build retention with email and SMS.",
+  },
 ];
 
-/* 02 · Brand Positioning Canvas */
-export const canvasBlocks: {
+/* PAGE 3 · Product Validation Framework */
+export const validationBlocks: {
   key: string;
   title: string;
   hint: string;
-  placeholder: string;
-  span?: 1 | 2;
 }[] = [
-  { key: "target", title: "Target Customer", hint: "Who exactly is this for?", placeholder: "e.g. Busy 28–40 y/o home cooks who care about design…", span: 1 },
-  { key: "pains", title: "Pain Points", hint: "What frustrates them today?", placeholder: "The problems they'd pay to make go away…", span: 1 },
-  { key: "dream", title: "Dream Outcome", hint: "What do they truly want?", placeholder: "The after-state they're buying…", span: 1 },
-  { key: "uvp", title: "Unique Value Proposition", hint: "Why you, not the alternative?", placeholder: "The one-sentence reason to choose you…", span: 1 },
-  { key: "positioning", title: "Positioning Statement", hint: "For [x] who [y], we are the [z] that…", placeholder: "For ___ who ___, [Brand] is the ___ that ___, because ___.", span: 2 },
-  { key: "personality", title: "Brand Personality", hint: "If the brand were a person…", placeholder: "e.g. Confident, warm, a little rebellious…", span: 1 },
-  { key: "visual", title: "Visual Direction", hint: "Look & feel in words", placeholder: "Colours, type, mood, references…", span: 1 },
-  { key: "competitors", title: "Competitors", hint: "Who else is in the frame?", placeholder: "The 3–4 brands customers compare you to…", span: 1 },
-  { key: "differentiators", title: "Key Differentiators", hint: "What you do that they can't", placeholder: "The hard-to-copy advantages…", span: 1 },
-  { key: "voice", title: "Brand Voice", hint: "How you sound", placeholder: "We sound ___, ___, ___. We never sound ___.", span: 1 },
-  { key: "tagline", title: "Tagline", hint: "5–7 memorable words", placeholder: "The line people remember…", span: 1 },
-  { key: "mission", title: "Mission", hint: "Why the brand exists", placeholder: "The change you're here to make…", span: 2 },
+  {
+    key: "demand",
+    title: "Demand",
+    hint: "Are people already searching for and buying this? Existing demand beats demand you have to create.",
+  },
+  {
+    key: "competition",
+    title: "Competition",
+    hint: "A few profitable competitors prove the market. A flood of identical sellers means a race to the bottom.",
+  },
+  {
+    key: "margins",
+    title: "Margins",
+    hint: "Can you sell at 3–5x landed cost? Thin margins leave no room for ads, returns or mistakes.",
+  },
+  {
+    key: "content",
+    title: "Content Potential",
+    hint: "Is the product visual and demonstrable? Easy content is free distribution.",
+  },
 ];
 
-/* 03 · Supplier Outreach Templates */
-export const supplierTemplates: {
-  id: string;
+/* PAGE 4 · Product Research Resources */
+export const researchGroups: {
   title: string;
-  tag: string;
-  subject: string;
-  body: string;
+  items: { name: string; desc: string; url: string }[];
 }[] = [
   {
-    id: "alibaba-first",
-    title: "Alibaba First Contact",
-    tag: "Sourcing",
-    subject: "Wholesale enquiry, [Product] for our brand",
-    body: `Hi [Name],
-
-I'm sourcing [product] for our brand, [Brand]. We're preparing our first production run and building a shortlist of long-term suppliers.
-
-Could you please share:
-• MOQ and unit price at MOQ and at 2x MOQ
-• Production and shipping lead times
-• Customization options (logo, packaging, materials)
-• Sample cost and timeline
-
-We plan to reorder monthly once sell-through is proven. Looking forward to working together.
-
-Best,
-[Your name], [Brand]
-[website]`,
-  },
-  {
-    id: "european",
-    title: "European Supplier",
-    tag: "Sourcing",
-    subject: "Partnership enquiry, [Brand] ([Country])",
-    body: `Hello [Name],
-
-We're [Brand], a growing ecommerce brand based in [Country]. We're looking for a reliable European supplier for [product] to shorten lead times and support local stock.
-
-Could you tell me more about:
-• Wholesale pricing and minimum order
-• Lead times for stock and reorders
-• Whitelabel / private-label options
-• Payment terms
-
-Happy to jump on a quick call if easier.
-
-Kind regards,
-[Your name]
-[Brand], [website]`,
-  },
-  {
-    id: "sample",
-    title: "Sample Request",
-    tag: "Quality",
-    subject: "Sample order, [Product] / [Variant]",
-    body: `Hi [Name],
-
-The specs look great. Before our first bulk order I'd like to order a sample of [variant] to check quality and finish.
-
-Please share:
-• Sample cost and how to pay
-• Estimated delivery time
-• Whether the sample cost is credited against the first order
-
-If quality matches, our opening order would be around [qty], with monthly reorders.
-
-Thanks,
-[Your name], [Brand]`,
-  },
-  {
-    id: "moq",
-    title: "MOQ Negotiation",
-    tag: "Negotiation",
-    subject: "MOQ flexibility for a first order",
-    body: `Hi [Name],
-
-Thanks for the details. We're excited to start, but [MOQ] is above our first-run budget as we validate demand.
-
-Would you be open to:
-• A reduced first-order MOQ of [target qty], or
-• MOQ at current price with a committed reorder within [timeframe]?
-
-We're building for the long term and want you as our main supplier. What can we make work?
-
-Best,
-[Your name], [Brand]`,
-  },
-  {
-    id: "price",
-    title: "Price Negotiation",
-    tag: "Negotiation",
-    subject: "Pricing for [qty] units, [Product]",
-    body: `Hi [Name],
-
-Quality looks strong and we're ready to move. To make the unit economics work at [qty], I'm aiming for [target price]/unit.
-
-If we can meet there, I'll place the order this week and commit to reordering [cadence] provided sell-through holds. Happy to increase volume as we scale.
-
-Can we agree on [target price]?
-
-Thanks,
-[Your name], [Brand]`,
-  },
-  {
-    id: "follow-up",
-    title: "Follow-up",
-    tag: "Ops",
-    subject: "Following up, [Product] quote",
-    body: `Hi [Name],
-
-Just following up on my message about [product]. We're finalising suppliers this week and would love to include you.
-
-If you can share [MOQ / price / lead time], I can move quickly. Anything you need from my side to speed things up?
-
-Thanks,
-[Your name], [Brand]`,
-  },
-  {
-    id: "agreement",
-    title: "Final Agreement",
-    tag: "Ops",
-    subject: "Confirming our first order, [Brand]",
-    body: `Hi [Name],
-
-Great working this out. Confirming the details of our first order:
-
-• Product: [product / variant]
-• Quantity: [qty]
-• Unit price: [price]
-• Total: [total]
-• Lead time: [days]
-• Payment terms: [deposit %] deposit, balance on [milestone]
-• Shipping: [method / Incoterm]
-
-Please send the proforma invoice and I'll arrange the deposit. Looking forward to a long partnership.
-
-Best,
-[Your name], [Brand]`,
-  },
-];
-
-/* 04 · Shopify Launch Checklist */
-export const checklistSections: { title: string; items: string[] }[] = [
-  {
-    title: "Brand",
+    title: "Product Ideas",
     items: [
-      "Logo, favicon and brand colours applied",
-      "Brand fonts set in theme settings",
-      "Consistent tone of voice across pages",
+      { name: "Minea", desc: "Ad-spy and winning-product discovery across platforms.", url: "https://www.minea.com" },
+      { name: "Kalodata", desc: "TikTok Shop analytics, find what's actually selling.", url: "https://www.kalodata.com" },
+      { name: "Amazon Movers & Shakers", desc: "Biggest gainers by category, real demand signals.", url: "https://www.amazon.com/gp/movers-and-shakers" },
+      { name: "TikTok Creative Center", desc: "Trending products, hashtags and creatives.", url: "https://ads.tiktok.com/business/creativecenter" },
     ],
   },
   {
-    title: "Store",
+    title: "Suppliers",
     items: [
-      "Fast, mobile-first theme installed",
-      "Homepage with clear value proposition",
-      "Navigation and footer links complete",
-      "Custom domain connected",
+      { name: "Alibaba", desc: "Global wholesale and manufacturing marketplace.", url: "https://www.alibaba.com" },
+      { name: "1688", desc: "China domestic wholesale, lower prices, more legwork.", url: "https://www.1688.com" },
+      { name: "Made-in-China", desc: "Verified manufacturers across categories.", url: "https://www.made-in-china.com" },
     ],
   },
   {
-    title: "Products",
+    title: "Competitor Research",
     items: [
-      "Benefit-led titles and descriptions",
-      "Professional photos (angles + lifestyle)",
-      "Variants, pricing and inventory set",
-      "Reviews / social proof enabled",
+      { name: "SimilarWeb", desc: "Traffic sources, volume and audience of any store.", url: "https://www.similarweb.com" },
+      { name: "BuiltWith", desc: "See the exact tech and apps a store runs on.", url: "https://builtwith.com" },
     ],
   },
   {
-    title: "Payments",
+    title: "Ads Research",
     items: [
-      "Shopify Payments / provider live",
-      "PayPal and express checkout enabled",
-      "Test order placed with a real card",
-    ],
-  },
-  {
-    title: "Shipping",
-    items: [
-      "Shipping rates and zones configured",
-      "Free-shipping threshold decided",
-      "Delivery times shown on product pages",
-    ],
-  },
-  {
-    title: "Legal",
-    items: [
-      "Refund, privacy and terms policies added",
-      "Cookie / GDPR banner configured",
-      "Contact page with working method",
-    ],
-  },
-  {
-    title: "Tracking",
-    items: [
-      "Meta Pixel + Conversions API installed",
-      "Google Ads / GA4 tags firing",
-      "TikTok pixel installed (if used)",
-    ],
-  },
-  {
-    title: "Marketing",
-    items: [
-      "Email + SMS capture with welcome offer",
-      "Abandoned-cart flow live",
-      "Launch offer / bundle ready",
-    ],
-  },
-  {
-    title: "Analytics",
-    items: [
-      "GA4 configured and reporting",
-      "Key events (add-to-cart, checkout) tracked",
-      "Dashboard bookmarked for daily review",
+      { name: "Meta Ads Library", desc: "Every active ad your competitors run on Meta.", url: "https://www.facebook.com/ads/library" },
+      { name: "TikTok Ads Library", desc: "Browse live TikTok ads by region and keyword.", url: "https://library.tiktok.com" },
     ],
   },
 ];
 
-/* 05 · AI Prompt Library */
+/* PAGE 5 · 100 AI Prompts I Actually Use */
 export const promptCategories = [
   "Product Research",
+  "Competitor Analysis",
   "Branding",
+  "Shopify",
   "Copywriting",
-  "Facebook Ads",
-  "Google Ads",
-  "SEO",
   "Email Marketing",
-  "Customer Service",
-  "TikTok",
-  "LinkedIn",
+  "Ads",
+  "Content Creation",
 ] as const;
 
 export type PromptCategory = (typeof promptCategories)[number];
@@ -301,165 +150,185 @@ export const prompts: {
   title: string;
   prompt: string;
 }[] = [
+  // Product Research
+  { id: "pr1", category: "Product Research", title: "Pain point mining", prompt: "Act as an ecommerce researcher. For [niche], list 10 specific customer pain points ranked by intensity. For each, give the exact words customers use and a product angle that solves it." },
+  { id: "pr2", category: "Product Research", title: "Trend validation", prompt: "Is demand for [product] rising, flat or fading? Summarise the evidence you'd check (search trends, communities, marketplaces) and give me a go / wait / avoid verdict with reasons." },
+  { id: "pr3", category: "Product Research", title: "Niche scoring", prompt: "Score this niche [niche] from 1–10 on demand, competition, margin potential, content potential and passion. Explain each score and give a final recommendation." },
+  { id: "pr4", category: "Product Research", title: "Adjacent products", prompt: "My core product is [product] for [customer]. List 8 adjacent products this customer also buys, so I can plan a brand instead of a one-product store." },
+  { id: "pr5", category: "Product Research", title: "Angle generator", prompt: "Give me 10 marketing angles for [product], each targeting a different motivation (status, convenience, fear, identity, savings...). Rank by how underused each is." },
+  // Competitor Analysis
+  { id: "ca1", category: "Competitor Analysis", title: "Gap analysis", prompt: "Analyse these competitors: [links/notes]. For each, summarise positioning, price, and weaknesses. Then identify 3 gaps I could own with [product]." },
+  { id: "ca2", category: "Competitor Analysis", title: "Review mining", prompt: "Here are competitor reviews: [paste]. Cluster the top complaints and top praises. Turn each complaint into a product or messaging opportunity for my brand." },
+  { id: "ca3", category: "Competitor Analysis", title: "Offer teardown", prompt: "Break down this competitor offer: [describe]. What makes it compelling, what's weak, and how could I build a clearly stronger offer for [customer]?" },
+  { id: "ca4", category: "Competitor Analysis", title: "Positioning map", prompt: "Given these competitors [list], map them on two axes I choose (e.g. price vs premium feel). Show me where the open space is and how to position there." },
+  // Branding
+  { id: "br1", category: "Branding", title: "Positioning statement", prompt: "Write a one-sentence positioning statement for [brand]: For [customer] who [need], [brand] is the [category] that [benefit], because [reason]. Give 3 variations." },
+  { id: "br2", category: "Branding", title: "Brand names", prompt: "Suggest 15 brand names for a [category] brand that feels [3 adjectives]. Mix invented words, real words and compounds. Flag likely .com issues." },
+  { id: "br3", category: "Branding", title: "Brand voice", prompt: "Define a brand voice for [brand] selling [product] to [customer]. Give 3 voice adjectives, 3 things we never sound like, and 5 example sentences." },
+  { id: "br4", category: "Branding", title: "Tagline", prompt: "Write 10 taglines for [brand] (5–7 words each) that capture [core benefit]. Range from literal to bold." },
+  // Shopify
+  { id: "sh1", category: "Shopify", title: "Product page", prompt: "Write a Shopify product page for [product]: a benefit-led title, 3 subheads, a 120-word description, 5 bullet benefits, and an FAQ answering 5 objections. Voice: [adjectives]." },
+  { id: "sh2", category: "Shopify", title: "Store structure", prompt: "Plan the page and navigation structure for a Shopify store selling [products]. Include homepage sections, collections, and trust pages in priority order." },
+  { id: "sh3", category: "Shopify", title: "Trust checklist", prompt: "Audit my Shopify store for trust. List everything a first-time visitor checks (subconsciously) before buying, and how to satisfy each on the page." },
+  { id: "sh4", category: "Shopify", title: "Upsell ideas", prompt: "Suggest 6 upsell and cross-sell ideas for [product] I can set up in Shopify, with the exact placement (cart, post-purchase, product page) for each." },
+  // Copywriting
+  { id: "cw1", category: "Copywriting", title: "Hero variations", prompt: "Write 8 hero headline + subhead pairs for [brand] selling [product] to [customer]. Range from rational to emotional. Headlines under 8 words." },
+  { id: "cw2", category: "Copywriting", title: "Objection handling", prompt: "List the top 7 reasons someone wouldn't buy [product], then write one short, honest line that dissolves each objection." },
+  { id: "cw3", category: "Copywriting", title: "Benefit rewrite", prompt: "Turn these product features into customer benefits: [paste features]. For each, use the 'which means you' method to reach the real outcome." },
+  { id: "cw4", category: "Copywriting", title: "Founder story", prompt: "Write a 150-word founder story for [brand] that builds trust and explains why we exist, without sounding corporate or fake." },
+  // Email Marketing
+  { id: "em1", category: "Email Marketing", title: "Welcome flow", prompt: "Draft a 5-email welcome flow for a new subscriber who claimed [lead magnet / discount]. Warm and useful, one soft CTA each. Give subject lines and outlines." },
+  { id: "em2", category: "Email Marketing", title: "Abandoned cart", prompt: "Write a 3-email abandoned-cart sequence for [product]: reminder, objection-handling, gentle urgency. Include subject lines and preview text." },
+  { id: "em3", category: "Email Marketing", title: "Launch campaign", prompt: "Plan a 4-email launch campaign for [product/offer]: teaser, launch, social proof, last-chance. Give the goal and angle of each email." },
+  { id: "em4", category: "Email Marketing", title: "Win-back", prompt: "Write a 2-email win-back sequence for customers who haven't bought in 90 days from [brand]. Make it feel personal, not desperate." },
+  // Ads
+  { id: "ad1", category: "Ads", title: "Primary text angles", prompt: "Write 5 Meta ad primary-text variations for [product], each a different angle (PAS, testimonial, us-vs-them, founder story, listicle). 90–120 words each." },
+  { id: "ad2", category: "Ads", title: "Video hooks", prompt: "Give me 15 scroll-stopping first-3-second hooks for a video ad selling [product] to [customer]. Make them specific and pattern-interrupting." },
+  { id: "ad3", category: "Ads", title: "UGC script", prompt: "Write a 30-second UGC-style ad script for [product]: hook, problem, product reveal, proof, CTA. Native and casual, not salesy." },
+  { id: "ad4", category: "Ads", title: "Audience ideas", prompt: "Suggest 10 interest and behaviour targeting ideas on Meta for [product] and [customer], grouped by intent level." },
+  // Content Creation
+  { id: "cc1", category: "Content Creation", title: "TikTok concepts", prompt: "Write 10 TikTok video concepts for [product]: a hook, a 15–30s outline and an on-screen text idea for each. Native, not ad-like." },
+  { id: "cc2", category: "Content Creation", title: "Content calendar", prompt: "Build a 2-week content calendar for [brand] on [platform]. For each post give a hook, format, and goal (reach, trust, or conversion)." },
+  { id: "cc3", category: "Content Creation", title: "Repurpose", prompt: "Turn this long piece [paste] into 5 short-form scripts, 3 email snippets and 5 tweet-style hooks, keeping the brand voice." },
+  { id: "cc4", category: "Content Creation", title: "Hook bank", prompt: "Give me 20 reusable content hooks for the [niche] audience, mixing curiosity, contrarian takes, and relatable pain. Keep each under 12 words." },
+];
+
+/* PAGE 6 · Shopify Launch Checklist */
+export const shopifySections: { title: string; items: string[] }[] = [
   {
-    id: "pr-1",
-    category: "Product Research",
-    title: "Find underserved pain points",
-    prompt:
-      "Act as an ecommerce researcher. For [niche], list 10 specific customer pain points, ranked by intensity. For each, give the exact words customers use and a product angle that solves it.",
+    title: "Foundations",
+    items: [
+      "Custom domain connected and SSL active",
+      "Fast, mobile-first theme installed",
+      "Logo, favicon and brand colours applied",
+      "Brand fonts set in theme settings",
+    ],
   },
   {
-    id: "pr-2",
-    category: "Product Research",
-    title: "Competitor gap analysis",
-    prompt:
-      "Analyse these competitors: [links/notes]. For each, summarise their positioning, price, and weaknesses. Then identify 3 gaps in the market I could own with [product].",
+    title: "Landing & product pages",
+    items: [
+      "Benefit-led headline above the fold (not just a product name)",
+      "Emotion first, logic second, objections handled before the price",
+      "Professional photos: multiple angles + lifestyle",
+      "Clear pricing, variants and stock",
+      "Reviews / social proof block visible",
+      "Strong, sticky add-to-cart",
+    ],
   },
   {
-    id: "br-1",
-    category: "Branding",
-    title: "Positioning angles",
-    prompt:
-      "Give me 5 distinct positioning angles for [product] aimed at [customer]. Rank them by how hard they'd be for competitors to copy and explain why.",
+    title: "Trust",
+    items: [
+      "About page with a real story",
+      "Working contact method",
+      "Refund, privacy, shipping and terms policies",
+      "Secure-checkout and payment badges visible",
+    ],
   },
   {
-    id: "br-2",
-    category: "Branding",
-    title: "Brand name ideas",
-    prompt:
-      "Suggest 15 brand name ideas for a [category] brand that feels [3 adjectives]. Mix invented words, real words and compounds. Note which likely have .com availability issues.",
+    title: "Capture emails before you spend on ads",
+    items: [
+      "Email + SMS capture with a welcome offer",
+      "Pop-up or embedded form on the homepage",
+      "Welcome flow live so new subscribers get value",
+    ],
   },
   {
-    id: "cw-1",
-    category: "Copywriting",
-    title: "High-converting product page",
-    prompt:
-      "Write a product page for [product]: a benefit-led headline, 3 subheads, a 120-word description, 5 bullet benefits, and an FAQ of 5 objections with answers. Voice: [adjectives].",
+    title: "Conversion essentials",
+    items: [
+      "Abandoned-cart flow live",
+      "Free-shipping threshold or clear shipping cost",
+      "Cross-sell / bundle on the cart",
+      "Trust-building FAQ on product pages",
+    ],
   },
   {
-    id: "cw-2",
-    category: "Copywriting",
-    title: "Hero section variations",
-    prompt:
-      "Write 8 hero headline + subhead pairs for [brand] selling [product] to [customer]. Range from rational to emotional. Keep headlines under 8 words.",
+    title: "Payments & shipping",
+    items: [
+      "Shopify Payments / provider live",
+      "PayPal and express checkout enabled",
+      "Shipping rates, zones and delivery times configured",
+    ],
   },
   {
-    id: "fb-1",
-    category: "Facebook Ads",
-    title: "Primary text angles",
-    prompt:
-      "Write 5 Facebook primary-text variations for [product], each using a different angle (problem-agitate-solve, testimonial, us-vs-them, founder story, listicle). 90–120 words each.",
+    title: "Tracking & analytics",
+    items: [
+      "Meta Pixel + Conversions API installed",
+      "GA4 and Google Ads tags firing",
+      "TikTok pixel installed (if used)",
+      "Key events (add-to-cart, checkout) tracked",
+    ],
   },
   {
-    id: "fb-2",
-    category: "Facebook Ads",
-    title: "Hook lines for creatives",
-    prompt:
-      "Give me 15 scroll-stopping first-3-second hooks for a video ad selling [product] to [customer]. Make them pattern-interrupting and specific.",
-  },
-  {
-    id: "gg-1",
-    category: "Google Ads",
-    title: "Search ad copy",
-    prompt:
-      "Write a Google Search ad for [product]: 12 headlines (≤30 chars) and 4 descriptions (≤90 chars). Include benefits, offer and a clear CTA. Target keyword: [keyword].",
-  },
-  {
-    id: "gg-2",
-    category: "Google Ads",
-    title: "Keyword themes",
-    prompt:
-      "List 20 high-intent keywords for [product], grouped into 4 ad-group themes. Mark which are bottom-of-funnel vs research-stage.",
-  },
-  {
-    id: "seo-1",
-    category: "SEO",
-    title: "Blog cluster plan",
-    prompt:
-      "Build a content cluster for [topic]: 1 pillar page and 8 supporting articles. For each, give the target keyword, search intent and a compelling title.",
-  },
-  {
-    id: "seo-2",
-    category: "SEO",
-    title: "Collection page copy",
-    prompt:
-      "Write an SEO-friendly intro (120 words) for a [category] collection page targeting [keyword]. Natural, helpful, not stuffed. Add a 3-question FAQ.",
-  },
-  {
-    id: "em-1",
-    category: "Email Marketing",
-    title: "Welcome flow",
-    prompt:
-      "Draft a 5-email welcome flow for a subscriber who claimed our [lead magnet]. Warm and useful, one soft CTA each. Give subject lines and body outlines.",
-  },
-  {
-    id: "em-2",
-    category: "Email Marketing",
-    title: "Abandoned cart series",
-    prompt:
-      "Write a 3-email abandoned-cart sequence for [product]. Email 1 reminder, email 2 objection-handling, email 3 gentle urgency. Include subject lines.",
-  },
-  {
-    id: "cs-1",
-    category: "Customer Service",
-    title: "Refund response",
-    prompt:
-      "Write an empathetic response to a customer requesting a refund for [reason]. Keep the relationship, follow our policy: [policy], and offer a fair resolution.",
-  },
-  {
-    id: "cs-2",
-    category: "Customer Service",
-    title: "FAQ from tickets",
-    prompt:
-      "Here are recent support messages: [paste]. Cluster them into the top 8 recurring questions and write a clear, on-brand answer for each.",
-  },
-  {
-    id: "tt-1",
-    category: "TikTok",
-    title: "Video script hooks",
-    prompt:
-      "Write 10 TikTok video concepts for [product]: a hook, a 15–30s script outline and an on-screen text idea for each. Native, not ad-like.",
-  },
-  {
-    id: "tt-2",
-    category: "TikTok",
-    title: "Trend adaptation",
-    prompt:
-      "Given this trend/format: [describe], give me 5 ways [brand] could adapt it authentically to showcase [product] without feeling forced.",
-  },
-  {
-    id: "li-1",
-    category: "LinkedIn",
-    title: "Founder build-in-public post",
-    prompt:
-      "Write a LinkedIn post sharing a lesson from building [brand]: a strong hook, a short story, 3 takeaways and a question to drive comments. No hashtags spam.",
-  },
-  {
-    id: "li-2",
-    category: "LinkedIn",
-    title: "Milestone announcement",
-    prompt:
-      "Draft a LinkedIn post announcing [milestone] for [brand]. Humble, specific, credits the team/customers, and invites the reader into the journey.",
+    title: "Pre-flight",
+    items: [
+      "Place a real test order with a live card",
+      "Order confirmation + shipping emails styled",
+      "Proofread every page on mobile",
+      "Soft-launch to a warm audience before paid ads",
+    ],
   },
 ];
 
-/* 07 · Resource Directory */
-export const resources: {
-  name: string;
-  category: string;
-  description: string;
-  url: string;
-}[] = [
-  { name: "Alibaba", category: "Sourcing", description: "Global wholesale & manufacturing marketplace.", url: "https://www.alibaba.com" },
-  { name: "1688", category: "Sourcing", description: "China domestic wholesale, lower prices, more legwork.", url: "https://www.1688.com" },
-  { name: "CJ Dropshipping", category: "Fulfilment", description: "Sourcing, warehousing and fulfilment for dropshipping.", url: "https://cjdropshipping.com" },
-  { name: "AutoDS", category: "Fulfilment", description: "Product research and dropshipping automation.", url: "https://www.autods.com" },
-  { name: "Canva", category: "Design", description: "Fast, on-brand design for creative and social.", url: "https://www.canva.com" },
-  { name: "ChatGPT", category: "AI", description: "AI assistant for research, copy and planning.", url: "https://chat.openai.com" },
-  { name: "Claude", category: "AI", description: "AI assistant for long-form thinking and writing.", url: "https://claude.ai" },
-  { name: "Shopify", category: "Store", description: "The ecommerce platform to build and run your store.", url: "https://www.shopify.com" },
-  { name: "Klaviyo", category: "Email", description: "Email & SMS marketing built for ecommerce.", url: "https://www.klaviyo.com" },
-  { name: "Meta Ads Library", category: "Research", description: "See every active ad your competitors run.", url: "https://www.facebook.com/ads/library" },
-  { name: "Google Trends", category: "Research", description: "Validate demand and spot rising interest.", url: "https://trends.google.com" },
-  { name: "Exploding Topics", category: "Research", description: "Find trends before they peak.", url: "https://explodingtopics.com" },
+/* PAGE 7 · 12 Mistakes That Kill Ecommerce Brands */
+export const mistakes: { title: string; why: string; fix: string }[] = [
+  {
+    title: "Choosing products because they're trending",
+    why: "Trends peak and crash. By the time you've sourced and launched, the market is saturated and the hype is gone.",
+    fix: "Pick products with durable demand you can build a brand around. Use trends as traffic, not as your foundation.",
+  },
+  {
+    title: "Spending months designing a logo",
+    why: "A logo doesn't make sales, and perfectionism here is just productive procrastination that delays real feedback.",
+    fix: "Ship a clean, simple logo in a day. Refine your brand once you have customers and revenue.",
+  },
+  {
+    title: "Ordering too much inventory",
+    why: "Big first orders lock up your cash and punish you hard if the product doesn't sell. Most first products don't.",
+    fix: "Validate with samples or a small batch. Reorder from profit once demand is proven.",
+  },
+  {
+    title: "Ignoring content marketing",
+    why: "If you only exist through paid ads, your costs rise forever and one account ban can end the business.",
+    fix: "Build organic content from day one. It compounds, lowers CAC, and gives you owned distribution.",
+  },
+  {
+    title: "Launching without collecting emails",
+    why: "Traffic you don't capture is gone forever. Without a list, every launch and promo starts from zero.",
+    fix: "Add email + SMS capture before you drive any traffic, and build a welcome flow that delivers value.",
+  },
+  {
+    title: "Not validating demand",
+    why: "Building a store for a product nobody wants is the single most common way founders waste months and money.",
+    fix: "Prove demand exists (search, communities, competitors) before you build or buy anything.",
+  },
+  {
+    title: "Running ads too early",
+    why: "Ads amplify whatever you have. Point traffic at an unproven store and you just pay to confirm it doesn't convert.",
+    fix: "Get organic proof and a converting page first. Then test ads with small, controlled budgets.",
+  },
+  {
+    title: "Competing only on price",
+    why: "There's always someone cheaper. A price war destroys the margins you need to survive and grow.",
+    fix: "Compete on positioning, experience and brand. Give people a reason to choose you beyond cost.",
+  },
+  {
+    title: "Copying competitors",
+    why: "A copy is always a worse version of the original, and it gives customers no reason to switch to you.",
+    fix: "Study competitors for gaps, then differentiate. Be the obvious choice for a specific person.",
+  },
+  {
+    title: "Ignoring customer retention",
+    why: "If every sale is a new customer, you're on a treadmill. Acquisition is expensive; repeat buyers are where profit lives.",
+    fix: "Invest in email, post-purchase experience and product quality so customers come back and refer others.",
+  },
+  {
+    title: "No clear positioning",
+    why: "If you're for everyone, you're for no one. Vague brands are forgettable and hard to market.",
+    fix: "Choose a specific customer and a sharp angle. Say clearly who you're for and why you're different.",
+  },
+  {
+    title: "Quitting too early",
+    why: "Most brands are abandoned right before the lessons compound into results. Early failure looks identical to almost-there.",
+    fix: "Set a realistic runway, treat losses as tuition, and keep iterating. Persistence with feedback wins.",
+  },
 ];

@@ -193,7 +193,7 @@ export function LessonView({ slug }: { slug: string }) {
             <div className="text-right">
               <div className="text-xs text-white/70">You&apos;ve finished the kit</div>
               <div className="text-sm font-semibold tracking-tight">
-                Continue with Zero to Brand™
+                Continue with The Profitable Brand Roadmap
               </div>
             </div>
             <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

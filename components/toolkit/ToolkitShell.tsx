@@ -76,7 +76,7 @@ export function ToolkitShell({ children }: { children: React.ReactNode }) {
         <footer className="print-hide border-t border-neutral-100 lg:pl-0">
           <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-2 px-5 py-8 text-center sm:flex-row sm:px-8 sm:text-left">
             <p className="text-sm font-medium text-neutral-900">
-              Zero to Brand™{" "}
+              Profitable Brand Starter Kit{" "}
               <span className="font-normal text-neutral-400">by Dinis</span>
             </p>
             <p className="text-sm text-neutral-400">
