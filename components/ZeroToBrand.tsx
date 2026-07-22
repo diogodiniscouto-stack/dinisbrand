@@ -49,15 +49,9 @@ export function ZeroToBrand() {
             viewport={{ once: true, amount: 0.3 }}
             className="relative flex flex-col items-center text-center"
           >
-            <motion.span
-              variants={fadeUp}
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-accent-300"
-            >
-              Ready for more?
-            </motion.span>
             <motion.h2
               variants={fadeUp}
-              className="mt-6 text-balance text-3xl font-semibold leading-[1.08] tracking-tighter text-white sm:text-4xl md:text-[2.85rem]"
+              className="text-balance text-3xl font-semibold leading-[1.08] tracking-tighter text-white sm:text-4xl md:text-[2.85rem]"
             >
               The Profitable Brand Roadmap
             </motion.h2>

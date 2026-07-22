@@ -9,8 +9,8 @@ export default function Home() {
     <>
       <main>
         <Hero />
-        <InsideToolkit />
         <Newsletter />
+        <InsideToolkit />
         <ZeroToBrand />
       </main>
       <Footer />
