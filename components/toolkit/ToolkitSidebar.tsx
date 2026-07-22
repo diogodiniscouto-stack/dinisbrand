@@ -41,15 +41,14 @@ export function ToolkitSidebar({ onNavigate }: { onNavigate?: () => void }) {
           <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-neutral-900 text-sm font-semibold text-white shadow-soft transition-transform duration-300 group-hover:scale-105">
             D
           </span>
-          <span className="min-w-0">
-            <span className="block truncate text-[0.9rem] font-semibold tracking-tight text-neutral-900">
+          <span className="min-w-0 leading-tight">
+            <span className="block text-[0.82rem] font-semibold tracking-tight text-neutral-900">
+              Profitable Brand
+              <br />
               Starter Kit
             </span>
-            <span className="mt-0.5 flex items-center gap-1.5">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400" />
-              <span className="text-[0.68rem] font-medium text-neutral-400">
-                Free · by Dinis
-              </span>
+            <span className="mt-1 block text-[0.68rem] font-medium text-neutral-400">
+              by Dinis
             </span>
           </span>
         </Link>
@@ -116,13 +115,13 @@ export function ToolkitSidebar({ onNavigate }: { onNavigate?: () => void }) {
           />
           <div className="relative">
             <p className="text-[0.64rem] font-semibold uppercase tracking-[0.16em] text-accent-300">
-              When you&apos;re ready
+              Finished the Starter Kit?
             </p>
             <p className="mt-1 text-sm font-semibold leading-snug text-white">
-              Build your brand
+              Ready to build a real ecommerce brand?
             </p>
             <span className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-white/60">
-              See next steps
+              Explore next steps
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </span>
           </div>

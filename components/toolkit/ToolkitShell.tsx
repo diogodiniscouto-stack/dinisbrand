@@ -1,12 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ToolkitSidebar } from "./ToolkitSidebar";
+import { useToolkitProgress, TOOLKIT_LESSONS } from "@/lib/toolkitProgress";
 
 export function ToolkitShell({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const { mark } = useToolkitProgress();
+
+  // Mark a lesson as visited whenever the visitor opens one.
+  useEffect(() => {
+    if (TOOLKIT_LESSONS.includes(pathname)) mark(pathname);
+  }, [pathname, mark]);
 
   return (
     <div className="min-h-screen bg-neutral-50/40">
