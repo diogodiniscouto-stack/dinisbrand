@@ -8,13 +8,13 @@ import { Check, ArrowRight, ArrowUpRight } from "@/components/Icons";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
 const descriptions: Record<string, string> = {
-  "Ecommerce Reality Check": "Should you even start? An honest look before you invest.",
-  "Beginner Roadmap": "The exact sequence from idea to first sales.",
-  "Product Validation Framework": "Score any product before you commit.",
-  "Product Research Resources": "The tools I use to find products and suppliers.",
+  "Is Ecommerce Right for You?": "Answer the honest questions before you invest a euro.",
+  "The Road to First Sale": "The whole path from zero to first sale, on one visual page.",
+  "Validate Before You Waste Money": "Score your idea before you spend a cent.",
+  "The Best Resources I Use": "The exact tools I use to find products and suppliers.",
   "AI Prompt Library": "The prompts I reach for every day.",
-  "Shopify Launch Checklist": "Set your store up like a pro before ads.",
-  "Beginner Mistakes": "The 12 errors that kill most brands.",
+  "Launch Without Regret": "Set your store up like a pro before ads.",
+  "12 Mistakes to Avoid": "The errors that kill most brands, and how to dodge them.",
 };
 
 const meta = ["7 Lessons", "30–40 minutes", "Beginner Friendly", "Completely Free"];

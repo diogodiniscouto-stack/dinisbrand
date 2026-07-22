@@ -1,6 +1,7 @@
 "use client";
 
 import { ToolHeader } from "./ToolHeader";
+import { ToolkitPageNav } from "./ToolkitPageNav";
 import { shopifySections } from "@/lib/toolkit";
 import { useLocalState } from "@/lib/useLocalState";
 import { Check } from "@/components/Icons";
@@ -29,7 +30,7 @@ export function ShopifyChecklist() {
     <div className="print-full">
       <ToolHeader
         index="06 · Checklist"
-        title="Shopify Launch Checklist"
+        title="Launch Without Regret"
         description="Set your store up like a pro before you spend a cent on ads. Tick items off as you go, your progress saves automatically."
         printable
         onReset={() => setChecked({})}
@@ -119,6 +120,8 @@ export function ShopifyChecklist() {
           );
         })}
       </div>
+
+      <ToolkitPageNav />
     </div>
   );
 }

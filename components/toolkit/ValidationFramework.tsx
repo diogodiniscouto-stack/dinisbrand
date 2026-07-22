@@ -1,6 +1,7 @@
 "use client";
 
 import { ToolHeader } from "./ToolHeader";
+import { ToolkitPageNav } from "./ToolkitPageNav";
 import { validationBlocks } from "@/lib/toolkit";
 import { useLocalState } from "@/lib/useLocalState";
 import { cn } from "@/lib/utils";
@@ -48,8 +49,8 @@ export function ValidationFramework() {
     <div className="print-full">
       <ToolHeader
         index="03 · Framework"
-        title="Product Validation Framework"
-        description="Don't guess, score. Rate your product across four dimensions and read the verdict. Everything saves automatically."
+        title="Validate Before You Waste Money"
+        description="Don't guess, score. Rate your idea across the factors that decide whether a brand is worth building, before you spend a cent. Everything saves automatically."
         printable
         onReset={() => setState(initial)}
       />
@@ -136,6 +137,8 @@ export function ValidationFramework() {
           <p className="mt-2 max-w-xs text-sm text-white/60">{v.note}</p>
         </div>
       </div>
+
+      <ToolkitPageNav />
     </div>
   );
 }

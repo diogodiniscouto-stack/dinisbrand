@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ToolHeader } from "./ToolHeader";
+import { ToolkitPageNav } from "./ToolkitPageNav";
 import { researchGroups } from "@/lib/toolkit";
 import { ArrowUpRight } from "@/components/Icons";
 import { fadeUp, staggerContainer } from "@/lib/motion";
@@ -18,8 +19,8 @@ export function ResearchResources() {
     <div>
       <ToolHeader
         index="04 · Resources"
-        title="My Favourite Product Research Resources"
-        description="The exact tools I use to find products, vet suppliers, and study competitors, grouped by job."
+        title="The Best Resources I Use"
+        description="Now that you know what to look for, here are the exact tools I use to find products, vet suppliers, and study competitors."
       />
 
       <div className="flex flex-col gap-10">
@@ -64,6 +65,8 @@ export function ResearchResources() {
           </div>
         ))}
       </div>
+
+      <ToolkitPageNav />
     </div>
   );
 }

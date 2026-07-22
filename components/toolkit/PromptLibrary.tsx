@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { ToolHeader } from "./ToolHeader";
+import { ToolkitPageNav } from "./ToolkitPageNav";
 import { CopyButton } from "./CopyButton";
 import { prompts, promptCategories } from "@/lib/toolkit";
 import { Search } from "@/components/Icons";
@@ -94,6 +95,8 @@ export function PromptLibrary() {
       <p className="mt-6 text-center text-sm text-neutral-400">
         {filtered.length} prompt{filtered.length === 1 ? "" : "s"}
       </p>
+
+      <ToolkitPageNav />
     </div>
   );
 }

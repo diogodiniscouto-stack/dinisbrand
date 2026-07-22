@@ -17,13 +17,13 @@ import { cn } from "@/lib/utils";
 
 export const toolkitNav = [
   { label: "Dashboard", href: "/toolkit", icon: Grid },
-  { label: "Ecommerce Reality Check", href: "/toolkit/reality-check", icon: ShieldCheck },
-  { label: "Beginner Roadmap", href: "/toolkit/roadmap", icon: Map },
-  { label: "Product Validation Framework", href: "/toolkit/validation", icon: Target },
-  { label: "Product Research Resources", href: "/toolkit/research-resources", icon: Folder },
+  { label: "Is Ecommerce Right for You?", href: "/toolkit/reality-check", icon: ShieldCheck },
+  { label: "The Road to First Sale", href: "/toolkit/roadmap", icon: Map },
+  { label: "Validate Before You Waste Money", href: "/toolkit/validation", icon: Target },
+  { label: "The Best Resources I Use", href: "/toolkit/research-resources", icon: Folder },
   { label: "AI Prompt Library", href: "/toolkit/prompts", icon: Bolt },
-  { label: "Shopify Launch Checklist", href: "/toolkit/shopify-checklist", icon: Store },
-  { label: "Beginner Mistakes", href: "/toolkit/mistakes", icon: AlertTriangle },
+  { label: "Launch Without Regret", href: "/toolkit/shopify-checklist", icon: Store },
+  { label: "12 Mistakes to Avoid", href: "/toolkit/mistakes", icon: AlertTriangle },
 ];
 
 export function ToolkitSidebar({ onNavigate }: { onNavigate?: () => void }) {

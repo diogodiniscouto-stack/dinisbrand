@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ToolHeader } from "./ToolHeader";
+import { ToolkitPageNav } from "./ToolkitPageNav";
 import { roadmapSteps } from "@/lib/toolkit";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
@@ -10,8 +11,8 @@ export function BeginnerRoadmap() {
     <div>
       <ToolHeader
         index="02 · Roadmap"
-        title="The Beginner Roadmap"
-        description="The exact sequence from an idea to your first sales. Follow it in order, each step builds on the last."
+        title="The Road to First Sale"
+        description="One visual page. Look at it for thirty seconds and you'll see there's actually a clear path from zero to your first sale."
       />
 
       <motion.ol
@@ -49,6 +50,8 @@ export function BeginnerRoadmap() {
           </motion.li>
         ))}
       </motion.ol>
+
+      <ToolkitPageNav />
     </div>
   );
 }
