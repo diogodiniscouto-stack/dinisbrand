@@ -85,7 +85,7 @@ export function Hero() {
             </motion.p>
 
             {/* Email CTA with animated neon ring */}
-            <motion.div variants={fadeUp} className="group relative mt-8 w-full max-w-xl">
+            <motion.div variants={fadeUp} className="group relative mt-8 w-full max-w-2xl">
               {/* Outer neon glow (flowing gradient, shape-safe) */}
               <div
                 aria-hidden

@@ -23,6 +23,7 @@ export function EmailCaptureForm({
   placeholder?: string;
   className?: string;
 }) {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -31,10 +32,11 @@ export function EmailCaptureForm({
     e.preventDefault();
     if (!email.trim() || loading) return;
     setLoading(true);
-    // TODO: POST the email to your provider (Loops, ConvertKit, Resend…).
+    // TODO: POST the name + email to your provider (Loops, ConvertKit, Resend…).
     if (typeof window !== "undefined") {
       try {
         window.localStorage.setItem("dinisbrands:lead", email);
+        if (name.trim()) window.localStorage.setItem("toolkit:name", name.trim());
       } catch {
         /* ignore storage errors */
       }
@@ -55,12 +57,23 @@ export function EmailCaptureForm({
         )}
       >
         <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="First name"
+          aria-label="First name"
+          autoComplete="given-name"
+          className="h-14 rounded-full bg-transparent px-5 text-[1.02rem] text-neutral-900 outline-none placeholder:text-neutral-400 sm:w-36 sm:px-6"
+        />
+        <span aria-hidden className="mx-1 hidden h-7 w-px bg-neutral-200 sm:block" />
+        <input
           type="email"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder={placeholder}
           aria-label="Email address"
+          autoComplete="email"
           className="h-14 flex-1 rounded-full bg-transparent px-5 text-[1.02rem] text-neutral-900 outline-none placeholder:text-neutral-400 sm:px-6"
         />
         <button

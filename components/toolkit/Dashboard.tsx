@@ -15,7 +15,10 @@ function WelcomeBack() {
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState("");
 
-  if (!nameHydrated || !hydrated || !started) return null;
+  if (!nameHydrated || !hydrated) return null;
+  if (!started && !name) return null;
+
+  const greeting = started ? "Welcome back" : "Welcome";
 
   function save(e: React.FormEvent) {
     e.preventDefault();
@@ -30,7 +33,7 @@ function WelcomeBack() {
       {name && !editing ? (
         <>
           <span className="font-medium text-neutral-800">
-            Welcome back, {name}.
+            {greeting}, {name}.
           </span>
           <button
             type="button"
@@ -61,7 +64,7 @@ function WelcomeBack() {
         </form>
       ) : (
         <>
-          <span className="font-medium text-neutral-800">Welcome back.</span>
+          <span className="font-medium text-neutral-800">{greeting}.</span>
           <button
             type="button"
             onClick={() => {
